@@ -1,0 +1,274 @@
+"use client";
+
+import React, { useRef, useState } from "react";
+import { Phone, ChevronLeft, ChevronRight } from "lucide-react";
+
+const CountryFlag = ({ country }: { country: string }) => {
+  switch (country.toLowerCase()) {
+    case "china":
+      return (
+        <svg className="w-5 h-3.5 rounded-sm object-cover shrink-0 border border-slate-200" viewBox="0 0 30 20" fill="none">
+          <rect width="30" height="20" fill="#DE2910" />
+          <path d="M5 6L6.5 10.5L2.5 7.5H7.5L3.5 10.5L5 6Z" fill="#FFDE00" />
+          <path d="M10 3L10.5 4.5L9.5 3.5H10.5L9.5 4.5L10 3Z" fill="#FFDE00" />
+          <path d="M12 5L12.5 6.5L11.5 5.5H12.5L11.5 6.5L12 5Z" fill="#FFDE00" />
+          <path d="M12 8L12.5 9.5L11.5 8.5H12.5L11.5 9.5L12 8Z" fill="#FFDE00" />
+          <path d="M10 10L10.5 11.5L9.5 10.5H10.5L9.5 11.5L10 10Z" fill="#FFDE00" />
+        </svg>
+      );
+    case "india":
+      return (
+        <svg className="w-5 h-3.5 rounded-sm object-cover shrink-0 border border-slate-200" viewBox="0 0 3 2">
+          <rect width="3" height="2" fill="#FFFFFF" />
+          <rect width="3" height="0.667" fill="#FF9933" />
+          <rect y="1.333" width="3" height="0.667" fill="#138808" />
+          <circle cx="1.5" cy="1" r="0.18" fill="#000080" />
+          <circle cx="1.5" cy="1" r="0.12" fill="none" stroke="#FFFFFF" strokeWidth="0.02" />
+        </svg>
+      );
+    case "singapore":
+      return (
+        <svg className="w-5 h-3.5 rounded-sm object-cover shrink-0 border border-slate-200" viewBox="0 0 36 24">
+          <rect width="36" height="24" fill="#FFFFFF" />
+          <rect width="36" height="12" fill="#DF0000" />
+          <path d="M8 4.5 C10 4.5 11.5 6 11.5 8 C11.5 10 10 11.5 8 11.5 C7 11.5 6 11 5.5 10 C6.5 10.5 8 10 8.5 9 C9 8 8.5 6.5 7.5 6 C7.7 5 7.9 4.5 8 4.5" fill="#FFFFFF" />
+        </svg>
+      );
+    case "malaysia":
+      return (
+        <svg className="w-5 h-3.5 rounded-sm object-cover shrink-0 border border-slate-200" viewBox="0 0 28 14">
+          <rect width="28" height="14" fill="#FFFFFF" />
+          <rect width="28" height="1" fill="#CC0000" />
+          <rect y="2" width="28" height="1" fill="#CC0000" />
+          <rect y="4" width="28" height="1" fill="#CC0000" />
+          <rect y="6" width="28" height="1" fill="#CC0000" />
+          <rect y="8" width="28" height="1" fill="#CC0000" />
+          <rect y="10" width="28" height="1" fill="#CC0000" />
+          <rect y="12" width="28" height="1" fill="#CC0000" />
+          <rect width="14" height="8" fill="#000066" />
+          <circle cx="6" cy="4" r="2.2" fill="#FFFF00" />
+          <circle cx="7.2" cy="4" r="2.2" fill="#000066" />
+          <polygon points="9,4 8,4.5 8.5,3.5 7.5,3.8 8.2,3 7.5,2.2 8.5,2.5 8,1.5 9,2 10,1.5 9.5,2.5 10.5,2.2 9.8,3 10.5,3.8 9.5,3.5" fill="#FFFF00" />
+        </svg>
+      );
+    case "uae":
+      return (
+        <svg className="w-5 h-3.5 rounded-sm object-cover shrink-0 border border-slate-200" viewBox="0 0 4 2">
+          <rect width="4" height="2" fill="#FFFFFF" />
+          <rect y="0" width="4" height="0.667" fill="#00732F" />
+          <rect y="1.333" width="4" height="0.667" fill="#000000" />
+          <rect x="0" y="0" width="1" height="2" fill="#FF0000" />
+        </svg>
+      );
+    case "united kingdom":
+      return (
+        <svg className="w-5 h-3.5 rounded-sm object-cover shrink-0 border border-slate-200" viewBox="0 0 50 30">
+          <rect width="50" height="30" fill="#012169" />
+          <path d="M0 0 L50 30 M0 30 L50 0" stroke="#FFFFFF" strokeWidth="6" />
+          <path d="M0 0 L50 30 M0 30 L50 0" stroke="#C8102E" strokeWidth="2" />
+          <path d="M25 0 V30 M0 15 H50" stroke="#FFFFFF" strokeWidth="10" />
+          <path d="M25 0 V30 M0 15 H50" stroke="#C8102E" strokeWidth="6" />
+        </svg>
+      );
+    case "france":
+      return (
+        <svg className="w-5 h-3.5 rounded-sm object-cover shrink-0 border border-slate-200" viewBox="0 0 3 2">
+          <rect x="0" width="1" height="2" fill="#00209F" />
+          <rect x="1" width="1" height="2" fill="#FFFFFF" />
+          <rect x="2" width="1" height="2" fill="#F42E38" />
+        </svg>
+      );
+    default:
+      return null;
+  }
+};
+
+const offices = [
+  {
+    country: "China",
+    badge: "Head Office China",
+    name: "GUANGZHOU AFFHAN INTERNATIONAL CO., LTD",
+    address:
+      "Room 2325, Canton Domestic Finance Centre, No.316 Chang Di Da Ma Lu, Guangzhou, GUANGDONG PROVINCE, China",
+    phone: "",
+  },
+  {
+    country: "India",
+    badge: "India",
+    name: "AFFHAN INTERNATIONAL PVT LTD",
+    address:
+      "No.69/46, Appavoo Tower, West Madha Church Road, Near by Harbour Gate No: 3, Royapuram, Chennai - 600 013. TAMIL NADU, INDIA",
+    phone: "+91 90920 09044 / +91 44 4743 2777",
+  },
+  {
+    country: "Singapore",
+    badge: "Singapore",
+    name: "AFFHAN INTERNATIONAL PTE. LTD.",
+    address: "10 Jalan Besar Sim Lim Tower #08-11, Singapore 208787",
+    phone: "+65 6296 0279",
+  },
+  {
+    country: "Malaysia",
+    badge: "Malaysia",
+    name: "AFFHAN INTERNATIONAL SDN. BHD.",
+    address: "NO 18, JALAN TEMENGGONG, 75000 MELAKA, MALAYSIA",
+    phone: "+60 11-5672 6242",
+  },
+  {
+    country: "UAE",
+    badge: "UAE",
+    name: "AFFHAN INTERNATIONAL TRADING LLC",
+    address:
+      "P.O.Box No. 7184, Office No: 203, White Crown Building, Plot No. 335 - 335, Sheikh Zayed Road, Dubai, UAE",
+    phone: "+971 54 406 5867",
+  },
+  {
+    country: "United Kingdom",
+    badge: "United Kingdom",
+    name: "AFFHAN INTERNATIONAL LTD",
+    address: "34, Monarch parade London Road Mitcham Surrey CR4 3HA",
+    phone: "+44 7438 911975",
+  },
+  {
+    country: "France",
+    badge: "France",
+    name: "AFFHAN INTERNATIONAL LTD",
+    address: "14 Rue de dunkerque 75010 PARIS",
+    phone: "",
+  },
+];
+
+export const OfficeLocations = () => {
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
+
+  const handleMouseDown = (e: React.MouseEvent) => {
+    if (!scrollRef.current) return;
+    setIsDragging(true);
+    setStartX(e.pageX - scrollRef.current.offsetLeft);
+    setScrollLeft(scrollRef.current.scrollLeft);
+  };
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!isDragging || !scrollRef.current) return;
+    e.preventDefault();
+    const x = e.pageX - scrollRef.current.offsetLeft;
+    const walk = (x - startX) * 1.5;
+    scrollRef.current.scrollLeft = scrollLeft - walk;
+  };
+
+  const handleMouseUpOrLeave = () => {
+    setIsDragging(false);
+  };
+
+  const slideLeft = () => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollBy({ left: -360, behavior: "smooth" });
+    }
+  };
+
+  const slideRight = () => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollBy({ left: 360, behavior: "smooth" });
+    }
+  };
+
+  return (
+    <section id="locations" className="relative bg-white text-slate-900 pb-20 pt-8 scroll-mt-24 overflow-hidden">
+      {/* Background Dot Grid Matrix & Radial Glows */}
+      <div className="absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-[0.35] pointer-events-none" />
+      <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-[#27a8c4]/5 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-[#176579]/5 rounded-full blur-[100px] pointer-events-none" />
+
+      <div className="container relative z-10 mx-auto px-5 sm:px-8 lg:px-14">
+        
+        <div className="text-center mb-8 relative">
+          <span className="text-xs font-semibold uppercase tracking-[0.26em] text-[#176579]">
+            OUR LOCATIONS
+          </span>
+          <h2 className="mt-2 text-3xl font-extrabold tracking-tight sm:text-4xl text-slate-900">
+            Global Network of Offices
+          </h2>
+          <div className="h-[3.5px] w-14 bg-[#27a8c4] rounded-full mx-auto mt-3 mb-4" />
+          <p className="text-slate-600 text-sm max-w-xl mx-auto leading-relaxed">
+            Operating across 7 key international manufacturing and trading hubs to coordinate your logistics and sourcing operations seamlessly.
+          </p>
+          
+          {/* Arrow navigation buttons in header for cleaner spacing on small folds */}
+          <div className="flex justify-center items-center gap-3 mt-4">
+            <button
+              onClick={slideLeft}
+              className="flex h-9 w-9 items-center justify-center rounded-full bg-white border border-slate-200 shadow-sm hover:border-[#27a8c4] hover:bg-[#27a8c4]/5 text-slate-600 hover:text-[#176579] transition-all duration-300 cursor-pointer"
+              aria-label="Scroll left"
+            >
+              <ChevronLeft className="h-4 w-4" />
+            </button>
+            <button
+              onClick={slideRight}
+              className="flex h-9 w-9 items-center justify-center rounded-full bg-white border border-slate-200 shadow-sm hover:border-[#27a8c4] hover:bg-[#27a8c4]/5 text-slate-600 hover:text-[#176579] transition-all duration-300 cursor-pointer"
+              aria-label="Scroll right"
+            >
+              <ChevronRight className="h-4 w-4" />
+            </button>
+          </div>
+        </div>
+
+        {/* Draggable Horizontal Carousel Container */}
+        <div className="relative max-w-6xl mx-auto">
+          <div
+            ref={scrollRef}
+            onMouseDown={handleMouseDown}
+            onMouseMove={handleMouseMove}
+            onMouseUp={handleMouseUpOrLeave}
+            onMouseLeave={handleMouseUpOrLeave}
+            className="flex gap-6 overflow-x-auto scroll-smooth select-none px-4 py-6 cursor-grab active:cursor-grabbing scrollbar-hide"
+          >
+            {offices.map((office, idx) => (
+              <div
+                key={idx}
+                className="group relative flex flex-col justify-between rounded-2xl border border-slate-200/80 bg-white/70 p-6 backdrop-blur-md transition-all duration-300 hover:-translate-y-2 hover:border-[#27a8c4]/50 hover:bg-white hover:shadow-[0_24px_50px_rgba(39,168,196,0.14)] w-[285px] sm:w-[320px] shrink-0 overflow-hidden min-h-[265px]"
+              >
+                {/* Top border indicator */}
+                <div className="absolute top-0 left-0 right-0 h-1.5 bg-[#27a8c4] rounded-t-2xl opacity-60 group-hover:opacity-100 transition-opacity duration-300" />
+                
+                <div>
+                  {/* Badge with inline SVG flag */}
+                  <span className="inline-flex items-center gap-2 rounded-full bg-[#27a8c4]/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-[#176579] border border-[#27a8c4]/15">
+                    <CountryFlag country={office.country} />
+                    {office.badge}
+                  </span>
+
+                  {/* Name */}
+                  <h3 className="mt-4 text-sm sm:text-base font-bold text-slate-900 tracking-tight leading-snug">
+                    {office.name}
+                  </h3>
+
+                  {/* Address */}
+                  <p className="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
+                    {office.address}
+                  </p>
+                </div>
+
+                {/* Phone */}
+                {office.phone && (
+                  <div className="mt-4 pt-3 border-t border-slate-100 flex items-center gap-2 text-xs text-[#176579] font-semibold">
+                    <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[#27a8c4]/15 text-[#176579] group-hover:scale-110 group-hover:rotate-12 transition-all duration-300 shrink-0">
+                      <Phone className="h-3 w-3 text-[#27a8c4]" />
+                    </span>
+                    <span>{office.phone}</span>
+                  </div>
+                )}
+
+                {/* Bottom growing glowing accent line */}
+                <div className="absolute bottom-0 left-0 h-[3px] bg-gradient-to-r from-[#27a8c4] to-[#176579] w-0 group-hover:w-full transition-all duration-500 ease-out shadow-[0_0_8px_rgba(39,168,196,0.4)]" />
+              </div>
+            ))}
+          </div>
+        </div>
+        
+      </div>
+    </section>
+  );
+};

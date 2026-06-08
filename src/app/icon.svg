@@ -1,0 +1,10 @@
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">AFFHAN logo</title>
+  <desc id="desc">AFFHAN brand mark with a stylized A and blue orbit ring.</desc>
+  <rect width="256" height="256" fill="transparent"/>
+  <path d="M53 112C60 73 96 44 142 42C181 40 210 59 215 85C221 118 185 145 131 151C84 156 50 142 46 119C45 115 46 111 47 107" stroke="#42C9E7" stroke-width="20" stroke-linecap="round"/>
+  <path d="M202 83C198 105 170 126 128 137C87 148 51 143 39 126C37 123 36 121 35 118" stroke="#06384D" stroke-width="9" stroke-linecap="round"/>
+  <path d="M85 135L120 40H159L195 135H158L151 113H117L110 135H85Z" fill="#153F50"/>
+  <path d="M125 87L134 58L144 87H125Z" fill="black" fill-opacity="0.18"/>
+  <text x="128" y="177" text-anchor="middle" font-family="Arial Black, Arial, Helvetica, sans-serif" font-size="38" font-weight="900" fill="#153F50" letter-spacing="1">AFFHAN</text>
+</svg>

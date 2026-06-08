@@ -1,0 +1,20 @@
+import type { Metadata } from "next";
+import AboutGlobePage from "@/components/ui/landing-page";
+import { FooterSection } from "@/components/sections/FooterSection";
+import { Navbar } from "@/components/sections/Navbar";
+
+export const metadata: Metadata = {
+  title: "About Us | Affhan Group",
+  description:
+    "Learn about Affhan Group, a global import, export and sourcing company supporting product sourcing, quality control, freight and end-to-end delivery.",
+};
+
+export default function AboutPage() {
+  return (
+    <>
+      <Navbar />
+      <AboutGlobePage />
+      <FooterSection />
+    </>
+  );
+}
