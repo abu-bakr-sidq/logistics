@@ -1,9 +1,9 @@
 services:
   - type: web
     name: affhan-logistics
-    runtime: node
+    runtime: static
     buildCommand: npm install && npm run build
-    startCommand: npm run start
+    staticPublishPath: ./out
     envVars:
       - key: NODE_VERSION
         value: 20
