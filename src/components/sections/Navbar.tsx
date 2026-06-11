@@ -86,7 +86,7 @@ export function Navbar() {
     setIsInputFocused(false);
     setNavSearchValue("");
     if (typeof window !== "undefined") {
-      if (pathname === "/categories") {
+      if (pathname.startsWith("/categories")) {
         window.dispatchEvent(
           new CustomEvent("select-product-suggestion", { detail: product })
         );
@@ -171,7 +171,7 @@ export function Navbar() {
   const handleNavbarSearchSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsInputFocused(false);
-    if (pathname !== "/categories") {
+    if (!pathname.startsWith("/categories")) {
       window.location.href = `/categories?q=${encodeURIComponent(navSearchValue)}`;
     } else {
       // Blur the active element to close mobile keyboard
@@ -515,13 +515,13 @@ export function Navbar() {
 
             {/* Shopping Bag / Products Shortcut (Contextual: links to contact page if already on categories page) */}
             <Link
-              href={pathname === "/categories" ? "/contact" : "/categories"}
+              href={pathname.startsWith("/categories") ? "/contact" : "/categories"}
               onClick={() => setMobileMenuOpen(false)}
               className="flex h-10 w-10 items-center justify-center text-slate-700 hover:text-[#27a8c4] transition-colors rounded-xl"
-              aria-label={pathname === "/categories" ? "Contact us" : "Explore products"}
+              aria-label={pathname.startsWith("/categories") ? "Contact us" : "Explore products"}
               prefetch={false}
             >
-              {pathname === "/categories" ? (
+              {pathname.startsWith("/categories") ? (
                 <Mail size={20} strokeWidth={2} />
               ) : (
                 <ShoppingBag size={20} strokeWidth={2} />
