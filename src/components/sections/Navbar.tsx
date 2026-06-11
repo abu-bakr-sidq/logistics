@@ -299,6 +299,7 @@ export function Navbar() {
           href="/"
           aria-label="AFFHAN home"
           onClick={() => setMobileMenuOpen(false)}
+          prefetch={false}
         >
           <Image
             className="object-contain object-left"
@@ -469,6 +470,7 @@ export function Navbar() {
                   : "text-slate-600 hover:text-[#27a8c4]"
               }`}
               href={item.href}
+              prefetch={false}
             >
               {item.label}
             </Link>
@@ -489,6 +491,7 @@ export function Navbar() {
           onClick={(e) => handleNavClick(e, "contact", "/contact")}
           className="hidden lg:block px-4 py-2 rounded-xl text-[11px] font-bold tracking-[0.08em] transition-all duration-300 hover:scale-102 hover:shadow-[0_4px_16px_rgba(39,168,196,0.25)] bg-[#176579] text-white hover:bg-[#27a8c4] shrink-0"
           href="/contact"
+          prefetch={false}
         >
           CONTACT US
         </Link>
@@ -504,6 +507,7 @@ export function Navbar() {
                 onClick={() => setMobileMenuOpen(false)}
                 className="flex h-10 w-10 items-center justify-center text-slate-700 hover:text-[#27a8c4] transition-colors rounded-xl"
                 aria-label="Search catalog"
+                prefetch={false}
               >
                 <Search size={20} strokeWidth={2} />
               </Link>
@@ -515,6 +519,7 @@ export function Navbar() {
               onClick={() => setMobileMenuOpen(false)}
               className="flex h-10 w-10 items-center justify-center text-slate-700 hover:text-[#27a8c4] transition-colors rounded-xl"
               aria-label={pathname === "/categories" ? "Contact us" : "Explore products"}
+              prefetch={false}
             >
               {pathname === "/categories" ? (
                 <Mail size={20} strokeWidth={2} />
@@ -566,6 +571,7 @@ export function Navbar() {
                       : "text-slate-600 hover:text-slate-900"
                   }`}
                   href={item.href}
+                  prefetch={false}
                 >
                   {item.id === "sourcing-process" ? "PROCESS OF SOURCING" : item.label}
                 </Link>
@@ -576,6 +582,7 @@ export function Navbar() {
               onClick={(e) => handleNavClick(e, "contact", "/contact")}
               className="mt-2 flex w-full items-center justify-center rounded-xl bg-gradient-to-r from-[#27a8c4] to-[#176579] py-3 text-xs font-bold text-white transition-all duration-300"
               href="/contact"
+              prefetch={false}
             >
               CONTACT US
             </Link>

@@ -495,6 +495,7 @@ export default function AboutGlobePage() {
                         : "border border-white/20 bg-white/5 text-white hover:border-white/50 hover:bg-white/10",
                     )}
                     href={action.href}
+                    prefetch={false}
                   >
                     {action.label}
                   </Link>
