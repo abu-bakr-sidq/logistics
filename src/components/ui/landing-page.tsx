@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import Globe from "@/components/ui/globe";
 import { cn } from "@/lib/utils";
@@ -325,6 +326,22 @@ export default function AboutGlobePage() {
                 section.align === "right" && "ml-auto",
               )}
             />
+
+            {section.id === "about-affhan" && (
+              <div className="mt-7 block w-full overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] shadow-[0_18px_42px_rgba(0,0,0,0.18)] sm:hidden">
+                <div className="relative aspect-[4/3] w-full">
+                  <Image
+                    src="/images/affhan-team.jpg"
+                    alt="Affhan Group team"
+                    fill
+                    className="object-cover"
+                    sizes="100vw"
+                    priority
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#081f2a]/35 via-transparent to-transparent" />
+                </div>
+              </div>
+            )}
 
             {Array.isArray(section.description) ? (
               <div className="mt-8 flex flex-col gap-6">

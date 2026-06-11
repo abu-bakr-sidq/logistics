@@ -19,11 +19,6 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Affhan Sourcing | Global Trade B2B Platform",
   description: "A modern logistics and global sourcing website by Affhan Group.",
-  icons: {
-    icon: [{ url: "/images/logo.png", type: "image/png" }],
-    shortcut: [{ url: "/images/logo.png", type: "image/png" }],
-    apple: [{ url: "/images/logo.png", type: "image/png" }],
-  },
 };
 
 export default function RootLayout({
