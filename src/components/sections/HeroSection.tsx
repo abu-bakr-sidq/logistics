@@ -82,7 +82,7 @@ export function HeroSection() {
         <video
           id="home"
           className="absolute inset-0 h-full w-full object-cover object-center"
-          src="/videos/global.mp4"
+          src="/videos/logistics-hero.mp4"
           autoPlay
           muted
           loop
