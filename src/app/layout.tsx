@@ -20,9 +20,9 @@ export const metadata: Metadata = {
   title: "Affhan Sourcing | Global Trade B2B Platform",
   description: "A modern logistics and global sourcing website by Affhan Group.",
   icons: {
-    icon: "/images/logo.png",
-    shortcut: "/images/logo.png",
-    apple: "/images/logo.png",
+    icon: [{ url: "/images/logo.png", type: "image/png" }],
+    shortcut: [{ url: "/images/logo.png", type: "image/png" }],
+    apple: [{ url: "/images/logo.png", type: "image/png" }],
   },
 };
 
