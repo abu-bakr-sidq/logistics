@@ -253,11 +253,25 @@ export const OfficeLocations = () => {
 
                 {/* Phone */}
                 {office.phone && (
-                  <div className="mt-4 pt-3 border-t border-slate-100 flex items-center gap-2 text-xs text-[#176579] font-semibold">
-                    <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[#27a8c4]/15 text-[#176579] group-hover:scale-110 group-hover:rotate-12 transition-all duration-300 shrink-0">
+                  <div className="mt-4 pt-3 border-t border-slate-100 flex items-start gap-2.5 text-xs text-[#176579] font-semibold">
+                    <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[#27a8c4]/15 text-[#176579] group-hover:scale-110 group-hover:rotate-12 transition-all duration-300 shrink-0 mt-0.5">
                       <Phone className="h-3 w-3 text-[#27a8c4]" />
                     </span>
-                    <span>{office.phone}</span>
+                    <div className="flex flex-col gap-0.5 min-w-0">
+                      {office.phone.split(" / ").map((num, i) => {
+                        const cleanNum = num.replace(/\s+/g, "");
+                        return (
+                          <a
+                            key={i}
+                            href={`tel:${cleanNum}`}
+                            className="hover:underline hover:text-[#27a8c4] transition duration-300 truncate"
+                            title={num}
+                          >
+                            {num}
+                          </a>
+                        );
+                      })}
+                    </div>
                   </div>
                 )}
 

@@ -304,7 +304,7 @@ export default function AboutGlobePage() {
             <h1
               className={cn(
                 "mt-5 font-bold tracking-tight leading-[1.02] text-white",
-                index === 0 && "max-w-4xl text-5xl sm:text-6xl lg:text-7xl",
+                index === 0 && "max-w-4xl text-3xl sm:text-6xl lg:text-7xl",
                 index === 1 &&
                   "w-full max-w-full text-center text-3xl sm:whitespace-nowrap sm:text-[clamp(2rem,2.8vw,3.25rem)]",
                 index > 1 && "max-w-4xl text-3xl sm:text-4xl lg:text-5xl",

@@ -130,7 +130,7 @@ export function SourcingProcessSection() {
   return (
     <section
       id="sourcing-process"
-      className="flex h-screen w-full snap-start flex-col overflow-hidden bg-[#245b6d] px-5 pb-6 pt-24 sm:px-8 lg:px-12"
+      className="flex min-h-screen lg:h-screen w-full lg:snap-start flex-col overflow-y-auto lg:overflow-hidden bg-[#245b6d] px-5 pb-6 pt-24 sm:px-8 lg:px-12"
     >
       <div className="relative z-30 mx-auto w-full max-w-6xl shrink-0 text-center">
         <span className="text-xs font-bold uppercase tracking-[0.24em] text-[#3cd5f7]">

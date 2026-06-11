@@ -79,8 +79,8 @@ const usefulLinks = [
   { label: "Explore Products", href: "/categories" },
   { label: "About Us", href: "/about" },
   { label: "Contact Us", href: "/contact" },
-  { label: "Privacy Policy", href: "#" },
-  { label: "Terms & Conditions", href: "#" },
+  { label: "Privacy Policy", href: "/privacy-policy" },
+  { label: "Terms & Conditions", href: "/terms-conditions" },
 ];
 
 const socialLinks = [

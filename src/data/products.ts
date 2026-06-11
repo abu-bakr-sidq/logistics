@@ -213,7 +213,7 @@ export const allProducts: Product[] = [
   },
   {
     "name": "Car Seat Hooks",
-    "image": "automative parts/car_seat_hooks_2.png",
+    "image": "automative parts/car_seat_hooks_1.png",
     "category": "Automative Parts",
     "moq": "1000 Pcs",
     "leadTime": "18 Days",
@@ -3156,7 +3156,7 @@ export const allProducts: Product[] = [
     "region": "Vietnam Sourcing Hub"
   },
   {
-    "name": "Breathable Polyester Fabric 10",
+    "name": "Kitchen Apparel",
     "image": "Clothing Fabrics/breathable_polyester_fabric_10.png",
     "category": "Clothing Fabrics",
     "moq": "200 Pcs",
@@ -3164,7 +3164,7 @@ export const allProducts: Product[] = [
     "region": "India Sourcing Hub"
   },
   {
-    "name": "Soft Knitted Wool Yarn Skein 11",
+    "name": "Thermal Underwear Set",
     "image": "Clothing Fabrics/soft_knitted_wool_yarn_skein_11.png",
     "category": "Clothing Fabrics",
     "moq": "500 Pcs",
@@ -3172,7 +3172,7 @@ export const allProducts: Product[] = [
     "region": "Vietnam Sourcing Hub"
   },
   {
-    "name": "Premium Pure Linen Fabric 12",
+    "name": "Casual T Shirt",
     "image": "Clothing Fabrics/premium_pure_linen_fabric_12.png",
     "category": "Clothing Fabrics",
     "moq": "1000 Pcs",
@@ -3180,7 +3180,7 @@ export const allProducts: Product[] = [
     "region": "China Sourcing Hub"
   },
   {
-    "name": "Stretch Denim Fabric 13",
+    "name": "Casual T Shirt",
     "image": "Clothing Fabrics/stretch_denim_fabric_13.png",
     "category": "Clothing Fabrics",
     "moq": "250 Pcs",
@@ -3188,7 +3188,7 @@ export const allProducts: Product[] = [
     "region": "India Sourcing Hub"
   },
   {
-    "name": "Satin Silk Fabric 14",
+    "name": "Terry Streetwear",
     "image": "Clothing Fabrics/satin_silk_fabric_14.png",
     "category": "Clothing Fabrics",
     "moq": "100 Pcs",
@@ -3196,7 +3196,7 @@ export const allProducts: Product[] = [
     "region": "Vietnam Sourcing Hub"
   },
   {
-    "name": "Flannel Plaid Fabric 15",
+    "name": "Bibs Washable",
     "image": "Clothing Fabrics/flannel_plaid_fabric_15.png",
     "category": "Clothing Fabrics",
     "moq": "200 Pcs",
@@ -3204,7 +3204,7 @@ export const allProducts: Product[] = [
     "region": "China Sourcing Hub"
   },
   {
-    "name": "Jacquard Brocade Fabric 16",
+    "name": "Sweatshirt Jacket",
     "image": "Clothing Fabrics/jacquard_brocade_fabric_16.png",
     "category": "Clothing Fabrics",
     "moq": "500 Pcs",
@@ -3212,7 +3212,7 @@ export const allProducts: Product[] = [
     "region": "India Sourcing Hub"
   },
   {
-    "name": "Pure Organic Cotton Fabric Roll 17",
+    "name": "Leg Jeans.",
     "image": "Clothing Fabrics/pure_organic_cotton_fabric_roll_17.png",
     "category": "Clothing Fabrics",
     "moq": "1000 Pcs",
@@ -3220,7 +3220,7 @@ export const allProducts: Product[] = [
     "region": "Vietnam Sourcing Hub"
   },
   {
-    "name": "Breathable Polyester Fabric 18",
+    "name": "Safety Vest",
     "image": "Clothing Fabrics/breathable_polyester_fabric_18.png",
     "category": "Clothing Fabrics",
     "moq": "250 Pcs",
@@ -3228,7 +3228,7 @@ export const allProducts: Product[] = [
     "region": "China Sourcing Hub"
   },
   {
-    "name": "Soft Knitted Wool Yarn Skein 19",
+    "name": "Spring Casual Jacket",
     "image": "Clothing Fabrics/soft_knitted_wool_yarn_skein_19.png",
     "category": "Clothing Fabrics",
     "moq": "100 Pcs",
@@ -3236,7 +3236,7 @@ export const allProducts: Product[] = [
     "region": "India Sourcing Hub"
   },
   {
-    "name": "Premium Pure Linen Fabric 20",
+    "name": "Casual Trousers",
     "image": "Clothing Fabrics/premium_pure_linen_fabric_20.png",
     "category": "Clothing Fabrics",
     "moq": "200 Pcs",
@@ -3244,7 +3244,7 @@ export const allProducts: Product[] = [
     "region": "Vietnam Sourcing Hub"
   },
   {
-    "name": "Stretch Denim Fabric 21",
+    "name": "Safety Vest",
     "image": "Clothing Fabrics/stretch_denim_fabric_21.png",
     "category": "Clothing Fabrics",
     "moq": "500 Pcs",
@@ -3252,7 +3252,7 @@ export const allProducts: Product[] = [
     "region": "China Sourcing Hub"
   },
   {
-    "name": "Satin Silk Fabric 22",
+    "name": "Sleeveless Tank Top",
     "image": "Clothing Fabrics/satin_silk_fabric_22.png",
     "category": "Clothing Fabrics",
     "moq": "1000 Pcs",
@@ -3260,7 +3260,7 @@ export const allProducts: Product[] = [
     "region": "India Sourcing Hub"
   },
   {
-    "name": "Flannel Plaid Fabric 23",
+    "name": "Fire Resistant Jacket",
     "image": "Clothing Fabrics/flannel_plaid_fabric_23.png",
     "category": "Clothing Fabrics",
     "moq": "250 Pcs",
@@ -3268,7 +3268,7 @@ export const allProducts: Product[] = [
     "region": "Vietnam Sourcing Hub"
   },
   {
-    "name": "Jacquard Brocade Fabric 24",
+    "name": "Chest Hunting Wader",
     "image": "Clothing Fabrics/jacquard_brocade_fabric_24.png",
     "category": "Clothing Fabrics",
     "moq": "100 Pcs",
@@ -3276,7 +3276,7 @@ export const allProducts: Product[] = [
     "region": "China Sourcing Hub"
   },
   {
-    "name": "Pure Organic Cotton Fabric Roll 25",
+    "name": "Thermal Underwear",
     "image": "Clothing Fabrics/pure_organic_cotton_fabric_roll_25.png",
     "category": "Clothing Fabrics",
     "moq": "200 Pcs",
@@ -3284,7 +3284,7 @@ export const allProducts: Product[] = [
     "region": "India Sourcing Hub"
   },
   {
-    "name": "Breathable Polyester Fabric 26",
+    "name": "Sleeveless Cotton Canvas",
     "image": "Clothing Fabrics/breathable_polyester_fabric_26.png",
     "category": "Clothing Fabrics",
     "moq": "500 Pcs",
@@ -3292,7 +3292,7 @@ export const allProducts: Product[] = [
     "region": "Vietnam Sourcing Hub"
   },
   {
-    "name": "Soft Knitted Wool Yarn Skein 27",
+    "name": "Brand Tshirt and Shorts Set",
     "image": "Clothing Fabrics/soft_knitted_wool_yarn_skein_27.png",
     "category": "Clothing Fabrics",
     "moq": "1000 Pcs",
@@ -3300,7 +3300,7 @@ export const allProducts: Product[] = [
     "region": "China Sourcing Hub"
   },
   {
-    "name": "Premium Pure Linen Fabric 28",
+    "name": "Baby feeding Waterproof Sleeve",
     "image": "Clothing Fabrics/premium_pure_linen_fabric_28.png",
     "category": "Clothing Fabrics",
     "moq": "250 Pcs",
@@ -3308,7 +3308,7 @@ export const allProducts: Product[] = [
     "region": "India Sourcing Hub"
   },
   {
-    "name": "Stretch Denim Fabric 29",
+    "name": "Safety Vest",
     "image": "Clothing Fabrics/stretch_denim_fabric_29.png",
     "category": "Clothing Fabrics",
     "moq": "100 Pcs",
@@ -3316,7 +3316,7 @@ export const allProducts: Product[] = [
     "region": "Vietnam Sourcing Hub"
   },
   {
-    "name": "Breathable Polyester Fabric 2",
+    "name": "Half Sleeve Baby T-Shirt",
     "image": "Clothing Fabrics/breathable_polyester_fabric_2.png",
     "category": "Clothing Fabrics",
     "moq": "200 Pcs",
@@ -3324,7 +3324,7 @@ export const allProducts: Product[] = [
     "region": "China Sourcing Hub"
   },
   {
-    "name": "Satin Silk Fabric 30",
+    "name": "Bib Apron",
     "image": "Clothing Fabrics/satin_silk_fabric_30.png",
     "category": "Clothing Fabrics",
     "moq": "500 Pcs",
@@ -3332,7 +3332,7 @@ export const allProducts: Product[] = [
     "region": "India Sourcing Hub"
   },
   {
-    "name": "Flannel Plaid Fabric 31",
+    "name": "Spring Casual Jacket",
     "image": "Clothing Fabrics/flannel_plaid_fabric_31.png",
     "category": "Clothing Fabrics",
     "moq": "1000 Pcs",
@@ -3340,7 +3340,7 @@ export const allProducts: Product[] = [
     "region": "Vietnam Sourcing Hub"
   },
   {
-    "name": "Jacquard Brocade Fabric 32",
+    "name": "Kids Cotton Sleeveless",
     "image": "Clothing Fabrics/jacquard_brocade_fabric_32.png",
     "category": "Clothing Fabrics",
     "moq": "250 Pcs",
@@ -3348,7 +3348,7 @@ export const allProducts: Product[] = [
     "region": "China Sourcing Hub"
   },
   {
-    "name": "Soft Knitted Wool Yarn Skein 3",
+    "name": "Casual T Shirt",
     "image": "Clothing Fabrics/soft_knitted_wool_yarn_skein_3.png",
     "category": "Clothing Fabrics",
     "moq": "100 Pcs",
@@ -3356,7 +3356,7 @@ export const allProducts: Product[] = [
     "region": "India Sourcing Hub"
   },
   {
-    "name": "Premium Pure Linen Fabric 4",
+    "name": "Safari Hunting Jacket",
     "image": "Clothing Fabrics/premium_pure_linen_fabric_4.png",
     "category": "Clothing Fabrics",
     "moq": "200 Pcs",
@@ -3364,7 +3364,7 @@ export const allProducts: Product[] = [
     "region": "Vietnam Sourcing Hub"
   },
   {
-    "name": "Stretch Denim Fabric 5",
+    "name": "Streetwear Jeans",
     "image": "Clothing Fabrics/stretch_denim_fabric_5.png",
     "category": "Clothing Fabrics",
     "moq": "500 Pcs",
@@ -3372,7 +3372,7 @@ export const allProducts: Product[] = [
     "region": "China Sourcing Hub"
   },
   {
-    "name": "Satin Silk Fabric 6",
+    "name": "Cowboy Pants",
     "image": "Clothing Fabrics/satin_silk_fabric_6.png",
     "category": "Clothing Fabrics",
     "moq": "1000 Pcs",
@@ -3380,7 +3380,7 @@ export const allProducts: Product[] = [
     "region": "India Sourcing Hub"
   },
   {
-    "name": "Flannel Plaid Fabric 7",
+    "name": "Casual T Shirt",
     "image": "Clothing Fabrics/flannel_plaid_fabric_7.png",
     "category": "Clothing Fabrics",
     "moq": "250 Pcs",
@@ -3388,7 +3388,7 @@ export const allProducts: Product[] = [
     "region": "Vietnam Sourcing Hub"
   },
   {
-    "name": "Jacquard Brocade Fabric 8",
+    "name": "Neck Thermal Underwear",
     "image": "Clothing Fabrics/jacquard_brocade_fabric_8.png",
     "category": "Clothing Fabrics",
     "moq": "100 Pcs",
@@ -3396,7 +3396,7 @@ export const allProducts: Product[] = [
     "region": "China Sourcing Hub"
   },
   {
-    "name": "Pure Organic Cotton Fabric Roll 9",
+    "name": "Pullover Sweat shirt",
     "image": "Clothing Fabrics/pure_organic_cotton_fabric_roll_9.png",
     "category": "Clothing Fabrics",
     "moq": "200 Pcs",
@@ -3404,7 +3404,7 @@ export const allProducts: Product[] = [
     "region": "India Sourcing Hub"
   },
   {
-    "name": "Flannel Plaid Fabric 407",
+    "name": "Safety Vest",
     "image": "Clothing Fabrics/flannel_plaid_fabric_407.png",
     "category": "Clothing Fabrics",
     "moq": "500 Pcs",
@@ -3412,7 +3412,7 @@ export const allProducts: Product[] = [
     "region": "Vietnam Sourcing Hub"
   },
   {
-    "name": "Pure Organic Cotton Fabric Roll 33",
+    "name": "Custom logo Pullover Hoodie",
     "image": "Clothing Fabrics/pure_organic_cotton_fabric_roll_33.png",
     "category": "Clothing Fabrics",
     "moq": "1000 Pcs",
@@ -3420,7 +3420,7 @@ export const allProducts: Product[] = [
     "region": "China Sourcing Hub"
   },
   {
-    "name": "Breathable Polyester Fabric 34",
+    "name": "Custom Logo Printing Tshirt Man",
     "image": "Clothing Fabrics/breathable_polyester_fabric_34.png",
     "category": "Clothing Fabrics",
     "moq": "250 Pcs",
@@ -3428,7 +3428,7 @@ export const allProducts: Product[] = [
     "region": "India Sourcing Hub"
   },
   {
-    "name": "Soft Knitted Wool Yarn Skein 35",
+    "name": "Soccer Uniform Clothes",
     "image": "Clothing Fabrics/soft_knitted_wool_yarn_skein_35.png",
     "category": "Clothing Fabrics",
     "moq": "100 Pcs",
@@ -3436,7 +3436,7 @@ export const allProducts: Product[] = [
     "region": "Vietnam Sourcing Hub"
   },
   {
-    "name": "Premium Pure Linen Fabric 36",
+    "name": "Sportswear Autumn and Winter",
     "image": "Clothing Fabrics/premium_pure_linen_fabric_36.png",
     "category": "Clothing Fabrics",
     "moq": "200 Pcs",
@@ -3444,7 +3444,7 @@ export const allProducts: Product[] = [
     "region": "China Sourcing Hub"
   },
   {
-    "name": "Stretch Denim Fabric 37",
+    "name": "Newborn Baby Clothes Sets",
     "image": "Clothing Fabrics/stretch_denim_fabric_37.png",
     "category": "Clothing Fabrics",
     "moq": "500 Pcs",
@@ -3452,7 +3452,7 @@ export const allProducts: Product[] = [
     "region": "India Sourcing Hub"
   },
   {
-    "name": "Satin Silk Fabric 38",
+    "name": "Girls Small Medium Children's Clothing",
     "image": "Clothing Fabrics/satin_silk_fabric_38.png",
     "category": "Clothing Fabrics",
     "moq": "1000 Pcs",
@@ -3460,7 +3460,7 @@ export const allProducts: Product[] = [
     "region": "Vietnam Sourcing Hub"
   },
   {
-    "name": "Flannel Plaid Fabric 39",
+    "name": "Clothing Manufacturers Custom Hoodie",
     "image": "Clothing Fabrics/flannel_plaid_fabric_39.png",
     "category": "Clothing Fabrics",
     "moq": "250 Pcs",
@@ -3468,7 +3468,7 @@ export const allProducts: Product[] = [
     "region": "China Sourcing Hub"
   },
   {
-    "name": "RGB Backlit Mechanical Keyboard 10",
+    "name": "Aluminum Stand Holder",
     "image": "Computer Accessories/rgb_backlit_mechanical_keyboard_10.png",
     "category": "Computer Accessories",
     "moq": "200 Pcs",
@@ -3476,7 +3476,7 @@ export const allProducts: Product[] = [
     "region": "India Sourcing Hub"
   },
   {
-    "name": "Multi Port USB C Hub Adapter 11",
+    "name": "Docking Station",
     "image": "Computer Accessories/multi_port_usb_c_hub_adapter_11.png",
     "category": "Computer Accessories",
     "moq": "500 Pcs",
@@ -3484,7 +3484,7 @@ export const allProducts: Product[] = [
     "region": "Vietnam Sourcing Hub"
   },
   {
-    "name": "Dual Fan Laptop Cooling Pad 12",
+    "name": "Table Socket",
     "image": "Computer Accessories/dual_fan_laptop_cooling_pad_12.png",
     "category": "Computer Accessories",
     "moq": "1000 Pcs",
@@ -3492,7 +3492,7 @@ export const allProducts: Product[] = [
     "region": "China Sourcing Hub"
   },
   {
-    "name": "Ergonomic Gel Wrist Rest Mouse Pad 13",
+    "name": "USB Socket",
     "image": "Computer Accessories/ergonomic_gel_wrist_rest_mouse_pad_13.png",
     "category": "Computer Accessories",
     "moq": "250 Pcs",
@@ -3500,7 +3500,7 @@ export const allProducts: Product[] = [
     "region": "India Sourcing Hub"
   },
   {
-    "name": "Shockproof External Hard Drive Case 14",
+    "name": "USB C Docking Station",
     "image": "Computer Accessories/shockproof_external_hard_drive_case_14.png",
     "category": "Computer Accessories",
     "moq": "100 Pcs",
@@ -3508,7 +3508,7 @@ export const allProducts: Product[] = [
     "region": "Vietnam Sourcing Hub"
   },
   {
-    "name": "Full HD Web Camera with Mic 15",
+    "name": "Computer Desk",
     "image": "Computer Accessories/full_hd_web_camera_with_mic_15.png",
     "category": "Computer Accessories",
     "moq": "200 Pcs",
@@ -3516,7 +3516,7 @@ export const allProducts: Product[] = [
     "region": "China Sourcing Hub"
   },
   {
-    "name": "Bluetooth Wireless Keyboard 16",
+    "name": "Laptop Stand",
     "image": "Computer Accessories/bluetooth_wireless_keyboard_16.png",
     "category": "Computer Accessories",
     "moq": "500 Pcs",
@@ -3524,7 +3524,7 @@ export const allProducts: Product[] = [
     "region": "India Sourcing Hub"
   },
   {
-    "name": "Silent Wireless Optical Mouse 17",
+    "name": "Adjustable Stand",
     "image": "Computer Accessories/silent_wireless_optical_mouse_17.png",
     "category": "Computer Accessories",
     "moq": "1000 Pcs",
@@ -3532,7 +3532,7 @@ export const allProducts: Product[] = [
     "region": "Vietnam Sourcing Hub"
   },
   {
-    "name": "RGB Backlit Mechanical Keyboard 18",
+    "name": "Sliding Socket",
     "image": "Computer Accessories/rgb_backlit_mechanical_keyboard_18.png",
     "category": "Computer Accessories",
     "moq": "250 Pcs",
@@ -3540,7 +3540,7 @@ export const allProducts: Product[] = [
     "region": "China Sourcing Hub"
   },
   {
-    "name": "Multi Port USB C Hub Adapter 19",
+    "name": "Gaming Computer Stand",
     "image": "Computer Accessories/multi_port_usb_c_hub_adapter_19.png",
     "category": "Computer Accessories",
     "moq": "100 Pcs",
@@ -3548,7 +3548,7 @@ export const allProducts: Product[] = [
     "region": "India Sourcing Hub"
   },
   {
-    "name": "RGB Backlit Mechanical Keyboard 2",
+    "name": "USB Connector Adapters",
     "image": "Computer Accessories/rgb_backlit_mechanical_keyboard_2.png",
     "category": "Computer Accessories",
     "moq": "200 Pcs",
@@ -3556,7 +3556,7 @@ export const allProducts: Product[] = [
     "region": "Vietnam Sourcing Hub"
   },
   {
-    "name": "Multi Port USB C Hub Adapter 3",
+    "name": "Mat Mousepad",
     "image": "Computer Accessories/multi_port_usb_c_hub_adapter_3.png",
     "category": "Computer Accessories",
     "moq": "500 Pcs",
@@ -3564,7 +3564,7 @@ export const allProducts: Product[] = [
     "region": "China Sourcing Hub"
   },
   {
-    "name": "Dual Fan Laptop Cooling Pad 4",
+    "name": "Portable Mechanical Keyboard",
     "image": "Computer Accessories/dual_fan_laptop_cooling_pad_4.png",
     "category": "Computer Accessories",
     "moq": "1000 Pcs",
@@ -3572,7 +3572,7 @@ export const allProducts: Product[] = [
     "region": "India Sourcing Hub"
   },
   {
-    "name": "Ergonomic Gel Wrist Rest Mouse Pad 5",
+    "name": "Screwdriver Set",
     "image": "Computer Accessories/ergonomic_gel_wrist_rest_mouse_pad_5.png",
     "category": "Computer Accessories",
     "moq": "250 Pcs",
@@ -3580,7 +3580,7 @@ export const allProducts: Product[] = [
     "region": "Vietnam Sourcing Hub"
   },
   {
-    "name": "Shockproof External Hard Drive Case 6",
+    "name": "Wireless Mechanical Keyboard",
     "image": "Computer Accessories/shockproof_external_hard_drive_case_6.png",
     "category": "Computer Accessories",
     "moq": "100 Pcs",
@@ -3588,7 +3588,7 @@ export const allProducts: Product[] = [
     "region": "China Sourcing Hub"
   },
   {
-    "name": "Full HD Web Camera with Mic 7",
+    "name": "Screw Driver Kit",
     "image": "Computer Accessories/full_hd_web_camera_with_mic_7.png",
     "category": "Computer Accessories",
     "moq": "200 Pcs",
@@ -3596,7 +3596,7 @@ export const allProducts: Product[] = [
     "region": "India Sourcing Hub"
   },
   {
-    "name": "Bluetooth Wireless Keyboard 8",
+    "name": "Game-specific LED-lit",
     "image": "Computer Accessories/bluetooth_wireless_keyboard_8.png",
     "category": "Computer Accessories",
     "moq": "500 Pcs",
@@ -3604,7 +3604,7 @@ export const allProducts: Product[] = [
     "region": "Vietnam Sourcing Hub"
   },
   {
-    "name": "Silent Wireless Optical Mouse 9",
+    "name": "Laptop Cooling Pad",
     "image": "Computer Accessories/silent_wireless_optical_mouse_9.png",
     "category": "Computer Accessories",
     "moq": "1000 Pcs",
@@ -3612,7 +3612,7 @@ export const allProducts: Product[] = [
     "region": "China Sourcing Hub"
   },
   {
-    "name": "Silent Wireless Optical Mouse 433",
+    "name": "Power Bank Set",
     "image": "Computer Accessories/silent_wireless_optical_mouse_433.png",
     "category": "Computer Accessories",
     "moq": "250 Pcs",
@@ -3620,7 +3620,7 @@ export const allProducts: Product[] = [
     "region": "India Sourcing Hub"
   },
   {
-    "name": "H 0 Aa 11 A 31 A 49 E 435 B",
+    "name": "PC Computer Keyboard and Mouse",
     "image": "Computer Accessories/h_0_aa_11_a_31_a_49_e_435_b.png",
     "category": "Computer Accessories",
     "moq": "100 Pcs",
@@ -3628,7 +3628,7 @@ export const allProducts: Product[] = [
     "region": "Vietnam Sourcing Hub"
   },
   {
-    "name": "H 0 Ce 9 D 2 C 84642444688151 E",
+    "name": "Optical LED Slim Wireless Mouse",
     "image": "Computer Accessories/h_0_ce_9_d_2_c_84642444688151_e.png",
     "category": "Computer Accessories",
     "moq": "200 Pcs",
@@ -3636,7 +3636,7 @@ export const allProducts: Product[] = [
     "region": "China Sourcing Hub"
   },
   {
-    "name": "H 0 D 6 E 5933 A 951449 C 827297",
+    "name": "Mounted Tactical Headset",
     "image": "Computer Accessories/h_0_d_6_e_5933_a_951449_c_827297.png",
     "category": "Computer Accessories",
     "moq": "500 Pcs",
@@ -3644,7 +3644,7 @@ export const allProducts: Product[] = [
     "region": "India Sourcing Hub"
   },
   {
-    "name": "H 2 F 23 Efb 4506 D 462 B 83 Dfbe",
+    "name": "Gaming Headset",
     "image": "Computer Accessories/h_2_f_23_efb_4506_d_462_b_83_dfbe.png",
     "category": "Computer Accessories",
     "moq": "1000 Pcs",
@@ -3652,7 +3652,7 @@ export const allProducts: Product[] = [
     "region": "Vietnam Sourcing Hub"
   },
   {
-    "name": "H 3184 Be 5 B 6 Cff 49 E 682153 B",
+    "name": "GPU Graphics Card",
     "image": "Computer Accessories/h_3184_be_5_b_6_cff_49_e_682153_b.png",
     "category": "Computer Accessories",
     "moq": "250 Pcs",
@@ -3660,7 +3660,7 @@ export const allProducts: Product[] = [
     "region": "China Sourcing Hub"
   },
   {
-    "name": "H 33 A 03238255 F 4 B 12 Bc 657 B",
+    "name": "Gaming Desktop PC",
     "image": "Computer Accessories/h_33_a_03238255_f_4_b_12_bc_657_b.png",
     "category": "Computer Accessories",
     "moq": "100 Pcs",
@@ -3668,7 +3668,7 @@ export const allProducts: Product[] = [
     "region": "India Sourcing Hub"
   },
   {
-    "name": "H 4 Dc 7 Da 0342 Ea 482 Ca 412 C",
+    "name": "Gaming Mouse",
     "image": "Computer Accessories/h_4_dc_7_da_0342_ea_482_ca_412_c.png",
     "category": "Computer Accessories",
     "moq": "200 Pcs",
@@ -3676,7 +3676,7 @@ export const allProducts: Product[] = [
     "region": "Vietnam Sourcing Hub"
   },
   {
-    "name": "H 5 Fb 4106 C 987 C 4128 Bf 37 Ab",
+    "name": "Graphics Tablets",
     "image": "Computer Accessories/h_5_fb_4106_c_987_c_4128_bf_37_ab.png",
     "category": "Computer Accessories",
     "moq": "500 Pcs",
@@ -3684,7 +3684,7 @@ export const allProducts: Product[] = [
     "region": "China Sourcing Hub"
   },
   {
-    "name": "Ha 1 Cd 5 B 9893474 A 4394 D 2 D",
+    "name": "Gaming Laptop",
     "image": "Computer Accessories/ha_1_cd_5_b_9893474_a_4394_d_2_d.png",
     "category": "Computer Accessories",
     "moq": "1000 Pcs",
@@ -3692,7 +3692,7 @@ export const allProducts: Product[] = [
     "region": "India Sourcing Hub"
   },
   {
-    "name": "Hadb 53 Fad 76 Cb 4 E 3 E 96 F 8",
+    "name": "Monitor",
     "image": "Computer Accessories/hadb_53_fad_76_cb_4_e_3_e_96_f_8.png",
     "category": "Computer Accessories",
     "moq": "250 Pcs",
@@ -3700,7 +3700,7 @@ export const allProducts: Product[] = [
     "region": "Vietnam Sourcing Hub"
   },
   {
-    "name": "Hc 5 B 856 A 9 Eb 9841 B 4 A 4950",
+    "name": "LCD Monitor",
     "image": "Computer Accessories/hc_5_b_856_a_9_eb_9841_b_4_a_4950.png",
     "category": "Computer Accessories",
     "moq": "100 Pcs",
@@ -3708,7 +3708,7 @@ export const allProducts: Product[] = [
     "region": "China Sourcing Hub"
   },
   {
-    "name": "Pedicure Tool Kit Set 1",
+    "name": "Acupressure Slipper",
     "image": "Cosmetic Beauty/pedicure_tool_kit_set_1.png",
     "category": "Cosmetic Beauty",
     "moq": "200 Pcs",
@@ -3716,7 +3716,7 @@ export const allProducts: Product[] = [
     "region": "India Sourcing Hub"
   },
   {
-    "name": "Eyelash Curler with Pads 15",
+    "name": "Pedicure Tools",
     "image": "Cosmetic Beauty/eyelash_curler_with_pads_15.png",
     "category": "Cosmetic Beauty",
     "moq": "500 Pcs",
@@ -3724,7 +3724,7 @@ export const allProducts: Product[] = [
     "region": "Vietnam Sourcing Hub"
   },
   {
-    "name": "Electric Earwax Removal Tool 16",
+    "name": "Eyelash Curler Stainless Steel",
     "image": "Cosmetic Beauty/electric_earwax_removal_tool_16.png",
     "category": "Cosmetic Beauty",
     "moq": "1000 Pcs",
@@ -3732,7 +3732,7 @@ export const allProducts: Product[] = [
     "region": "China Sourcing Hub"
   },
   {
-    "name": "Pedicure Tool Kit Set 17",
+    "name": "Ear Picking Tool",
     "image": "Cosmetic Beauty/pedicure_tool_kit_set_17.png",
     "category": "Cosmetic Beauty",
     "moq": "250 Pcs",
@@ -3740,7 +3740,7 @@ export const allProducts: Product[] = [
     "region": "India Sourcing Hub"
   },
   {
-    "name": "Precision Stainless Steel Nail Clipper 18",
+    "name": "Portable Manicure Set",
     "image": "Cosmetic Beauty/precision_stainless_steel_nail_clipper_18.png",
     "category": "Cosmetic Beauty",
     "moq": "100 Pcs",
@@ -3748,7 +3748,7 @@ export const allProducts: Product[] = [
     "region": "Vietnam Sourcing Hub"
   },
   {
-    "name": "Gel Polish Starter Set 19",
+    "name": "Nail Care Beauty Tools",
     "image": "Cosmetic Beauty/gel_polish_starter_set_19.png",
     "category": "Cosmetic Beauty",
     "moq": "200 Pcs",
@@ -3756,7 +3756,7 @@ export const allProducts: Product[] = [
     "region": "China Sourcing Hub"
   },
   {
-    "name": "Matte Waterproof Lipstick 20",
+    "name": "Nail Clipper Pedicure",
     "image": "Cosmetic Beauty/matte_waterproof_lipstick_20.png",
     "category": "Cosmetic Beauty",
     "moq": "500 Pcs",
@@ -3764,7 +3764,7 @@ export const allProducts: Product[] = [
     "region": "India Sourcing Hub"
   },
   {
-    "name": "Professional Makeup Brush Set 21",
+    "name": "Nail Art Magnetic Tool",
     "image": "Cosmetic Beauty/professional_makeup_brush_set_21.png",
     "category": "Cosmetic Beauty",
     "moq": "1000 Pcs",
@@ -3772,7 +3772,7 @@ export const allProducts: Product[] = [
     "region": "Vietnam Sourcing Hub"
   },
   {
-    "name": "Sonic Facial Cleansing Brush 22",
+    "name": "Glass Bead Cat Eye Tool",
     "image": "Cosmetic Beauty/sonic_facial_cleansing_brush_22.png",
     "category": "Cosmetic Beauty",
     "moq": "250 Pcs",
@@ -3780,7 +3780,7 @@ export const allProducts: Product[] = [
     "region": "China Sourcing Hub"
   },
   {
-    "name": "Eyelash Curler with Pads 23",
+    "name": "UV Gel Nail Polish",
     "image": "Cosmetic Beauty/eyelash_curler_with_pads_23.png",
     "category": "Cosmetic Beauty",
     "moq": "100 Pcs",
@@ -3788,7 +3788,7 @@ export const allProducts: Product[] = [
     "region": "India Sourcing Hub"
   },
   {
-    "name": "Electric Earwax Removal Tool 24",
+    "name": "Silver Metallic Nail Polish",
     "image": "Cosmetic Beauty/electric_earwax_removal_tool_24.png",
     "category": "Cosmetic Beauty",
     "moq": "200 Pcs",
@@ -3796,7 +3796,7 @@ export const allProducts: Product[] = [
     "region": "Vietnam Sourcing Hub"
   },
   {
-    "name": "Pedicure Tool Kit Set 25",
+    "name": "Cat Gel Nail Polish",
     "image": "Cosmetic Beauty/pedicure_tool_kit_set_25.png",
     "category": "Cosmetic Beauty",
     "moq": "500 Pcs",
@@ -3804,7 +3804,7 @@ export const allProducts: Product[] = [
     "region": "China Sourcing Hub"
   },
   {
-    "name": "Precision Stainless Steel Nail Clipper 26",
+    "name": "Makeup Sponge",
     "image": "Cosmetic Beauty/precision_stainless_steel_nail_clipper_26.png",
     "category": "Cosmetic Beauty",
     "moq": "1000 Pcs",
@@ -3812,7 +3812,7 @@ export const allProducts: Product[] = [
     "region": "India Sourcing Hub"
   },
   {
-    "name": "Gel Polish Starter Set 27",
+    "name": "Anti Pimple",
     "image": "Cosmetic Beauty/gel_polish_starter_set_27.png",
     "category": "Cosmetic Beauty",
     "moq": "250 Pcs",
@@ -3820,7 +3820,7 @@ export const allProducts: Product[] = [
     "region": "Vietnam Sourcing Hub"
   },
   {
-    "name": "Matte Waterproof Lipstick 28",
+    "name": "Metal Surma - Makeup Kit",
     "image": "Cosmetic Beauty/matte_waterproof_lipstick_28.png",
     "category": "Cosmetic Beauty",
     "moq": "100 Pcs",
@@ -3828,7 +3828,7 @@ export const allProducts: Product[] = [
     "region": "China Sourcing Hub"
   },
   {
-    "name": "Professional Makeup Brush Set 29",
+    "name": "Lipstick",
     "image": "Cosmetic Beauty/professional_makeup_brush_set_29.png",
     "category": "Cosmetic Beauty",
     "moq": "200 Pcs",
@@ -3836,7 +3836,7 @@ export const allProducts: Product[] = [
     "region": "India Sourcing Hub"
   },
   {
-    "name": "Professional Makeup Brush Set 5",
+    "name": "Makeup Custom Lip Gloss Kit",
     "image": "Cosmetic Beauty/professional_makeup_brush_set_5.png",
     "category": "Cosmetic Beauty",
     "moq": "500 Pcs",
@@ -3844,7 +3844,7 @@ export const allProducts: Product[] = [
     "region": "Vietnam Sourcing Hub"
   },
   {
-    "name": "Sonic Facial Cleansing Brush 6",
+    "name": "16 Colors Eye Shadow Kit Matte",
     "image": "Cosmetic Beauty/sonic_facial_cleansing_brush_6.png",
     "category": "Cosmetic Beauty",
     "moq": "1000 Pcs",
@@ -3852,7 +3852,7 @@ export const allProducts: Product[] = [
     "region": "China Sourcing Hub"
   },
   {
-    "name": "Eyelash Curler with Pads 7",
+    "name": "94 Color Shimmer Eyeshadow Kit",
     "image": "Cosmetic Beauty/eyelash_curler_with_pads_7.png",
     "category": "Cosmetic Beauty",
     "moq": "250 Pcs",
@@ -3860,7 +3860,7 @@ export const allProducts: Product[] = [
     "region": "India Sourcing Hub"
   },
   {
-    "name": "Electric Earwax Removal Tool 8",
+    "name": "Makeup Brushes Set Custom Logo",
     "image": "Cosmetic Beauty/electric_earwax_removal_tool_8.png",
     "category": "Cosmetic Beauty",
     "moq": "100 Pcs",
@@ -3868,7 +3868,7 @@ export const allProducts: Product[] = [
     "region": "Vietnam Sourcing Hub"
   },
   {
-    "name": "Pedicure Tool Kit Set 9",
+    "name": "Makeup Brush Set",
     "image": "Cosmetic Beauty/pedicure_tool_kit_set_9.png",
     "category": "Cosmetic Beauty",
     "moq": "200 Pcs",
@@ -3876,7 +3876,7 @@ export const allProducts: Product[] = [
     "region": "China Sourcing Hub"
   },
   {
-    "name": "Earwax Removal 4",
+    "name": "Cosmetics Lip Beauty Makeup",
     "image": "Cosmetic Beauty/earwax_removal_4.png",
     "category": "Cosmetic Beauty",
     "moq": "500 Pcs",
@@ -3884,7 +3884,7 @@ export const allProducts: Product[] = [
     "region": "India Sourcing Hub"
   },
   {
-    "name": "Eye Lash 6",
+    "name": "Super Plumper Lip Volumizer",
     "image": "Cosmetic Beauty/eye_lash_6.png",
     "category": "Cosmetic Beauty",
     "moq": "1000 Pcs",
@@ -3892,7 +3892,7 @@ export const allProducts: Product[] = [
     "region": "Vietnam Sourcing Hub"
   },
   {
-    "name": "Gel Soak",
+    "name": "Capsule Cream Moisturizing and",
     "image": "Cosmetic Beauty/gel_soak.png",
     "category": "Cosmetic Beauty",
     "moq": "250 Pcs",
@@ -3900,7 +3900,7 @@ export const allProducts: Product[] = [
     "region": "China Sourcing Hub"
   },
   {
-    "name": "Nail",
+    "name": "Facial Skincare Cream Serum",
     "image": "Cosmetic Beauty/nail.png",
     "category": "Cosmetic Beauty",
     "moq": "100 Pcs",
@@ -3908,7 +3908,7 @@ export const allProducts: Product[] = [
     "region": "India Sourcing Hub"
   },
   {
-    "name": "Nail Clipper 4",
+    "name": "Mens Skincare Products OEM",
     "image": "Cosmetic Beauty/nail_clipper_4.png",
     "category": "Cosmetic Beauty",
     "moq": "200 Pcs",
@@ -3916,7 +3916,7 @@ export const allProducts: Product[] = [
     "region": "Vietnam Sourcing Hub"
   },
   {
-    "name": "Pedicure 6",
+    "name": "Waterproof Makeup Bag",
     "image": "Cosmetic Beauty/pedicure_6.png",
     "category": "Cosmetic Beauty",
     "moq": "500 Pcs",
@@ -3924,7 +3924,7 @@ export const allProducts: Product[] = [
     "region": "China Sourcing Hub"
   },
   {
-    "name": "Pedicure Tools 4",
+    "name": "Velvet Matte Liquid Lipstick Set",
     "image": "Cosmetic Beauty/pedicure_tools_4.png",
     "category": "Cosmetic Beauty",
     "moq": "1000 Pcs",
@@ -3932,7 +3932,7 @@ export const allProducts: Product[] = [
     "region": "India Sourcing Hub"
   },
   {
-    "name": "Polish Tool 2",
+    "name": "Lip Gloss Liquid Lipstick Set",
     "image": "Cosmetic Beauty/polish_tool_2.png",
     "category": "Cosmetic Beauty",
     "moq": "250 Pcs",
@@ -3940,7 +3940,7 @@ export const allProducts: Product[] = [
     "region": "Vietnam Sourcing Hub"
   },
   {
-    "name": "Stripe Polish 4",
+    "name": "Korean Skin Care Beauty",
     "image": "Cosmetic Beauty/stripe_polish_4.png",
     "category": "Cosmetic Beauty",
     "moq": "100 Pcs",
@@ -4212,7 +4212,7 @@ export const allProducts: Product[] = [
     "region": "China Sourcing Hub"
   },
   {
-    "name": "Lightweight Athletic Running Shoes 1",
+    "name": "Gift Hamper Box",
     "image": "Footwear Products/lightweight_athletic_running_shoes_1.png",
     "category": "Footwear Products",
     "moq": "200 Pcs",
@@ -4220,7 +4220,7 @@ export const allProducts: Product[] = [
     "region": "India Sourcing Hub"
   },
   {
-    "name": "Classic Leather Loafers 2",
+    "name": "Saucer Gift",
     "image": "Footwear Products/classic_leather_loafers_2.png",
     "category": "Footwear Products",
     "moq": "500 Pcs",
@@ -4228,7 +4228,7 @@ export const allProducts: Product[] = [
     "region": "Vietnam Sourcing Hub"
   },
   {
-    "name": "Orthotic Cushion Indoor Slippers 3",
+    "name": "Gift Packing Material",
     "image": "Footwear Products/orthotic_cushion_indoor_slippers_3.png",
     "category": "Footwear Products",
     "moq": "1000 Pcs",
@@ -4236,7 +4236,7 @@ export const allProducts: Product[] = [
     "region": "China Sourcing Hub"
   },
   {
-    "name": "Casual Knit Sneakers 4",
+    "name": "Beach Sandals",
     "image": "Footwear Products/casual_knit_sneakers_4.png",
     "category": "Footwear Products",
     "moq": "250 Pcs",
@@ -4244,7 +4244,7 @@ export const allProducts: Product[] = [
     "region": "India Sourcing Hub"
   },
   {
-    "name": "Acupressure Foot Massage Sandals 5",
+    "name": "Acupressure Slipper",
     "image": "Footwear Products/acupressure_foot_massage_sandals_5.png",
     "category": "Footwear Products",
     "moq": "100 Pcs",
@@ -4252,7 +4252,7 @@ export const allProducts: Product[] = [
     "region": "Vietnam Sourcing Hub"
   },
   {
-    "name": "Waterproof Hiking Boots 6",
+    "name": "Sandals Slipper",
     "image": "Footwear Products/waterproof_hiking_boots_6.png",
     "category": "Footwear Products",
     "moq": "200 Pcs",
@@ -4260,7 +4260,7 @@ export const allProducts: Product[] = [
     "region": "China Sourcing Hub"
   },
   {
-    "name": "Women's Comfortable Flat Shoes 7",
+    "name": "Women's High Heel Slipper",
     "image": "Footwear Products/women_s_comfortable_flat_shoes_7.png",
     "category": "Footwear Products",
     "moq": "500 Pcs",
@@ -4268,7 +4268,7 @@ export const allProducts: Product[] = [
     "region": "India Sourcing Hub"
   },
   {
-    "name": "Men's Slide Sandals 8",
+    "name": "Flat Slippers",
     "image": "Footwear Products/men_s_slide_sandals_8.png",
     "category": "Footwear Products",
     "moq": "1000 Pcs",
@@ -4276,7 +4276,7 @@ export const allProducts: Product[] = [
     "region": "Vietnam Sourcing Hub"
   },
   {
-    "name": "Lightweight Athletic Running Shoes 9",
+    "name": "Sliders",
     "image": "Footwear Products/lightweight_athletic_running_shoes_9.png",
     "category": "Footwear Products",
     "moq": "250 Pcs",
@@ -4284,7 +4284,7 @@ export const allProducts: Product[] = [
     "region": "China Sourcing Hub"
   },
   {
-    "name": "Classic Leather Loafers 10",
+    "name": "Fluffy Slippers",
     "image": "Footwear Products/classic_leather_loafers_10.png",
     "category": "Footwear Products",
     "moq": "100 Pcs",
@@ -4292,7 +4292,7 @@ export const allProducts: Product[] = [
     "region": "India Sourcing Hub"
   },
   {
-    "name": "Orthotic Cushion Indoor Slippers 11",
+    "name": "Leather Slippers.",
     "image": "Footwear Products/orthotic_cushion_indoor_slippers_11.png",
     "category": "Footwear Products",
     "moq": "200 Pcs",
@@ -4300,7 +4300,7 @@ export const allProducts: Product[] = [
     "region": "Vietnam Sourcing Hub"
   },
   {
-    "name": "Casual Knit Sneakers 12",
+    "name": "Winter Slipper",
     "image": "Footwear Products/casual_knit_sneakers_12.png",
     "category": "Footwear Products",
     "moq": "500 Pcs",
@@ -4308,7 +4308,7 @@ export const allProducts: Product[] = [
     "region": "China Sourcing Hub"
   },
   {
-    "name": "Acupressure Foot Massage Sandals 13",
+    "name": "Bathing Slippers",
     "image": "Footwear Products/acupressure_foot_massage_sandals_13.png",
     "category": "Footwear Products",
     "moq": "1000 Pcs",
@@ -4316,7 +4316,7 @@ export const allProducts: Product[] = [
     "region": "India Sourcing Hub"
   },
   {
-    "name": "Waterproof Hiking Boots 14",
+    "name": "Hotel Slippers",
     "image": "Footwear Products/waterproof_hiking_boots_14.png",
     "category": "Footwear Products",
     "moq": "250 Pcs",
@@ -4324,7 +4324,7 @@ export const allProducts: Product[] = [
     "region": "Vietnam Sourcing Hub"
   },
   {
-    "name": "Women's Comfortable Flat Shoes 15",
+    "name": "Fancy Men & Women Outing Flat",
     "image": "Footwear Products/women_s_comfortable_flat_shoes_15.png",
     "category": "Footwear Products",
     "moq": "100 Pcs",
@@ -4332,7 +4332,7 @@ export const allProducts: Product[] = [
     "region": "China Sourcing Hub"
   },
   {
-    "name": "Men's Slide Sandals 16",
+    "name": "House Slippers",
     "image": "Footwear Products/men_s_slide_sandals_16.png",
     "category": "Footwear Products",
     "moq": "200 Pcs",
@@ -4340,7 +4340,7 @@ export const allProducts: Product[] = [
     "region": "India Sourcing Hub"
   },
   {
-    "name": "Lightweight Athletic Running Shoes 17",
+    "name": "China Shoes Summer slippers",
     "image": "Footwear Products/lightweight_athletic_running_shoes_17.png",
     "category": "Footwear Products",
     "moq": "500 Pcs",
@@ -4348,7 +4348,7 @@ export const allProducts: Product[] = [
     "region": "Vietnam Sourcing Hub"
   },
   {
-    "name": "Classic Leather Loafers 18",
+    "name": "Beach Casual Slipper",
     "image": "Footwear Products/classic_leather_loafers_18.png",
     "category": "Footwear Products",
     "moq": "1000 Pcs",
@@ -4356,7 +4356,7 @@ export const allProducts: Product[] = [
     "region": "China Sourcing Hub"
   },
   {
-    "name": "Orthotic Cushion Indoor Slippers 19",
+    "name": "Customized slippers",
     "image": "Footwear Products/orthotic_cushion_indoor_slippers_19.png",
     "category": "Footwear Products",
     "moq": "250 Pcs",
@@ -4364,7 +4364,7 @@ export const allProducts: Product[] = [
     "region": "India Sourcing Hub"
   },
   {
-    "name": "Casual Knit Sneakers 20",
+    "name": "customized slippers for men & women",
     "image": "Footwear Products/casual_knit_sneakers_20.png",
     "category": "Footwear Products",
     "moq": "100 Pcs",
@@ -9612,7 +9612,7 @@ export const allProducts: Product[] = [
     "region": "China Sourcing Hub"
   },
   {
-    "name": "Acupressure Board Slippers For",
+    "name": "Brightening Moisturizing Waterproof",
     "image": "Cosmetic Beauty/acupressure_board_slippers_for.png",
     "category": "Cosmetic Beauty",
     "moq": "200 Pcs",
@@ -9620,7 +9620,7 @@ export const allProducts: Product[] = [
     "region": "China Sourcing Hub"
   },
   {
-    "name": "Acupressure Board Slippers For",
+    "name": "Summer Slippers",
     "image": "Footwear Products/acupressure_board_slippers_for.png",
     "category": "Footwear Products",
     "moq": "200 Pcs",
@@ -9628,7 +9628,7 @@ export const allProducts: Product[] = [
     "region": "China Sourcing Hub"
   },
   {
-    "name": "Classic Comfortable Check Tweed",
+    "name": "Women's Flip Flops",
     "image": "Footwear Products/classic_comfortable_check_tweed.png",
     "category": "Footwear Products",
     "moq": "200 Pcs",
@@ -9636,7 +9636,7 @@ export const allProducts: Product[] = [
     "region": "China Sourcing Hub"
   },
   {
-    "name": "Custom Logo Flat Sandals Slippers",
+    "name": "Women Chunky Wedge Slippers",
     "image": "Footwear Products/custom_logo_flat_sandals_slippers.png",
     "category": "Footwear Products",
     "moq": "200 Pcs",
@@ -9644,7 +9644,7 @@ export const allProducts: Product[] = [
     "region": "China Sourcing Hub"
   },
   {
-    "name": "High Color Value Ceramic Coffee",
+    "name": "Men's Shoes PU Leather Shoes",
     "image": "Footwear Products/high_color_value_ceramic_coffee.png",
     "category": "Footwear Products",
     "moq": "200 Pcs",
@@ -9652,7 +9652,7 @@ export const allProducts: Product[] = [
     "region": "China Sourcing Hub"
   },
   {
-    "name": "Luxury Self Care Coffee Hamper 6",
+    "name": "Walking Boot",
     "image": "Footwear Products/luxury_self_care_coffee_hamper_6.png",
     "category": "Footwear Products",
     "moq": "200 Pcs",
@@ -9660,7 +9660,7 @@ export const allProducts: Product[] = [
     "region": "China Sourcing Hub"
   },
   {
-    "name": "Multi Style Custom Wrapping Paper",
+    "name": "Men's Casual Running Shoes",
     "image": "Footwear Products/multi_style_custom_wrapping_paper.png",
     "category": "Footwear Products",
     "moq": "200 Pcs",
@@ -9668,7 +9668,7 @@ export const allProducts: Product[] = [
     "region": "China Sourcing Hub"
   },
   {
-    "name": "Slippers Shoes Sandals Designer",
+    "name": "Stylish shoes",
     "image": "Footwear Products/slippers_shoes_sandals_designer.png",
     "category": "Footwear Products",
     "moq": "200 Pcs",
@@ -9676,7 +9676,7 @@ export const allProducts: Product[] = [
     "region": "China Sourcing Hub"
   },
   {
-    "name": "Stylish Hotel Slippers With",
+    "name": "Cross-border Mens Shoes",
     "image": "Footwear Products/stylish_hotel_slippers_with.png",
     "category": "Footwear Products",
     "moq": "200 Pcs",
@@ -9684,7 +9684,7 @@ export const allProducts: Product[] = [
     "region": "China Sourcing Hub"
   },
   {
-    "name": "Trendy Office Design Comfort",
+    "name": "Walking Shoes for Women",
     "image": "Footwear Products/trendy_office_design_comfort.png",
     "category": "Footwear Products",
     "moq": "200 Pcs",
@@ -9692,7 +9692,7 @@ export const allProducts: Product[] = [
     "region": "China Sourcing Hub"
   },
   {
-    "name": "Waterproof Winter Warm Genuine",
+    "name": "Women's Shoes",
     "image": "Footwear Products/waterproof_winter_warm_genuine.png",
     "category": "Footwear Products",
     "moq": "200 Pcs",
@@ -9700,7 +9700,7 @@ export const allProducts: Product[] = [
     "region": "China Sourcing Hub"
   },
   {
-    "name": "Welcome Small Quantity Order",
+    "name": "Newest Rubber Sole shoes",
     "image": "Footwear Products/welcome_small_quantity_order.png",
     "category": "Footwear Products",
     "moq": "200 Pcs",
@@ -9708,7 +9708,7 @@ export const allProducts: Product[] = [
     "region": "China Sourcing Hub"
   },
   {
-    "name": "Wholesale Fashion Round Toe",
+    "name": "Fashionable Casual Shoes",
     "image": "Footwear Products/wholesale_fashion_round_toe.png",
     "category": "Footwear Products",
     "moq": "200 Pcs",
@@ -9716,7 +9716,7 @@ export const allProducts: Product[] = [
     "region": "China Sourcing Hub"
   },
   {
-    "name": "Wholesale Of Women S Special",
+    "name": "Beach Sandals",
     "image": "Footwear Products/wholesale_of_women_s_special.png",
     "category": "Footwear Products",
     "moq": "200 Pcs",

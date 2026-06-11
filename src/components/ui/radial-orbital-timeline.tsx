@@ -327,7 +327,7 @@ export default function RadialOrbitalTimeline({
 
   return (
     <div
-      className="flex h-full w-full flex-col items-center justify-center overflow-hidden bg-[#245b6d]"
+      className="flex h-auto lg:h-full w-full flex-col items-center justify-center lg:overflow-hidden bg-[#245b6d]"
       ref={containerRef}
       onClick={handleContainerClick}
       onMouseEnter={() => setIsHovered(true)}
@@ -346,8 +346,8 @@ export default function RadialOrbitalTimeline({
         `}
       </style>
 
-      <div className="relative flex h-full w-full max-w-[1440px] px-8 items-center justify-center">
-        
+      {/* Desktop circular orbit timeline */}
+      <div className="relative hidden lg:flex h-full w-full max-w-[1440px] px-8 items-center justify-center">
         {/* Left Side Panel (Workflow Summary) */}
         <div className="hidden xl:flex absolute left-8 top-1/2 -translate-y-1/2 w-[285px] flex-col gap-5 rounded-2xl border border-white/15 bg-white/5 p-6 backdrop-blur-md text-white select-none shadow-[0_8px_32px_rgba(0,0,0,0.12)]">
           <div className="flex flex-col gap-1">
@@ -392,7 +392,7 @@ export default function RadialOrbitalTimeline({
               </span>
             </div>
             <div className="flex flex-col min-w-0">
-              <span className={`text-[10px] uppercase tracking-wider font-extrabold transition-colors duration-300 ${displayItem ? "text-[#3cd5f7]" : "text-white/75"}`}>
+              <span className={`text-[10px] uppercase tracking-wider font-extrabold transition-colors duration-350 ${displayItem ? "text-[#3cd5f7]" : "text-white/75"}`}>
                 {displayItem ? "Selected Stage" : "Total Progress"}
               </span>
               <span className="text-xs font-bold text-white transition-all duration-300 truncate max-w-[170px]" title={displayItem ? `Step 0${displayItem.id} of 0${totalSteps} (${displayItem.title})` : undefined}>
@@ -671,7 +671,7 @@ export default function RadialOrbitalTimeline({
                     className={`
                       absolute bottom-12 left-1/2 -translate-x-1/2 w-max max-w-[160px] 
                       bg-slate-900/95 text-[#e9f8fb] text-[10px] font-bold px-2.5 py-1 rounded-md shadow-lg 
-                      backdrop-blur-md pointer-events-none transition-all duration-300 transform border border-white/10 text-center
+                      backdrop-blur-md pointer-events-none transition-all duration-355 transform border border-white/10 text-center
                       ${
                         isExpanded
                           ? "scale-100 opacity-100 translate-y-0"
@@ -762,6 +762,84 @@ export default function RadialOrbitalTimeline({
           )}
         </div>
 
+      </div>
+
+      {/* Mobile / Tablet Vertical Stepper Timeline (lg:hidden) */}
+      <div className="lg:hidden flex w-full flex-col gap-6 px-4 py-8 pointer-events-auto">
+        <div className="relative w-full max-w-xl mx-auto flex flex-col gap-8 py-6">
+          {/* Vertical pipeline guide */}
+          <div className="absolute left-[23px] top-4 bottom-4 w-[2px] bg-gradient-to-b from-[#27a8c4]/80 via-white/20 to-[#27a8c4]/80" />
+
+          {timelineData.map((item) => {
+            const Icon = item.icon;
+            const checklist = stepChecklists[item.id];
+            const isCompleted = item.status === "completed";
+            const isInProgress = item.status === "in-progress";
+
+            return (
+              <div key={item.id} className="relative pl-14 flex flex-col">
+                {/* Glowing node on line */}
+                <div
+                  className={`absolute left-2 top-0.5 flex h-9.5 w-9.5 items-center justify-center rounded-full border-2 transition-all duration-300 ${
+                    isCompleted
+                      ? "bg-[#1f5369] border-[#27a8c4] text-white shadow-[0_0_12px_rgba(39,168,196,0.45)]"
+                      : isInProgress
+                      ? "bg-white border-[#27a8c4] text-[#176579] animate-pulse shadow-[0_0_18px_rgba(39,168,196,0.65)] ring-4 ring-[#27a8c4]/20"
+                      : "bg-[#133744] border-slate-350 text-slate-300/80"
+                  }`}
+                >
+                  <Icon size={15} />
+                </div>
+
+                {/* Stepper Card */}
+                <div className="w-full rounded-2xl border border-white/10 bg-white/[0.03] p-5 backdrop-blur-md shadow-md hover:border-[#27a8c4]/30 hover:bg-white/[0.05] transition-all duration-300">
+                  {/* Header info */}
+                  <div className="flex items-center justify-between gap-2">
+                    <span className={`text-[9px] font-mono font-bold uppercase tracking-wider rounded-full px-2.5 py-0.5 border ${
+                      isCompleted
+                        ? "bg-[#27a8c4]/20 border-[#27a8c4]/40 text-[#3cd5f7]"
+                        : isInProgress
+                        ? "bg-[#27a8c4]/30 border-[#27a8c4] text-white animate-pulse"
+                        : "bg-white/5 border-white/10 text-white/50"
+                    }`}>
+                      {item.date}
+                    </span>
+                    <span className="text-[10px] font-bold uppercase tracking-widest text-[#3cd5f7]/85">
+                      {item.category}
+                    </span>
+                  </div>
+
+                  {/* Title */}
+                  <h3 className="mt-2 text-base font-extrabold text-white">
+                    {item.title}
+                  </h3>
+
+                  {/* Description */}
+                  <p className="mt-2 text-xs leading-relaxed text-slate-300">
+                    {item.content}
+                  </p>
+
+                  {/* Deliverables List */}
+                  {checklist && (
+                    <div className="mt-4 border-t border-white/5 pt-3">
+                      <span className="text-[10px] font-extrabold uppercase tracking-wider text-[#3cd5f7] block mb-2">
+                        {checklist.title}
+                      </span>
+                      <ul className="space-y-2">
+                        {checklist.items.map((bullet, idx) => (
+                          <li key={idx} className="flex items-start gap-2 text-[11px] text-slate-200/90 leading-normal">
+                            <span className="mt-1 flex h-1 w-1 shrink-0 rounded-full bg-[#3cd5f7]" />
+                            <span>{bullet}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                </div>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </div>
   );

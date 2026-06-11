@@ -59,7 +59,6 @@ const countries: Country[] = [
   { name: "Turkey", code: "tr" },
   { name: "Egypt", code: "eg" },
   { name: "Jordan", code: "jo" },
-  { name: "Israel", code: "il" },
   { name: "Iraq", code: "iq" },
   { name: "Lebanon", code: "lb" },
   { name: "Germany", code: "de" },
@@ -182,10 +181,10 @@ export function GlobalMapSection() {
   return (
     <section
       id="global-map"
-      className="flex h-screen w-full snap-start flex-col overflow-hidden bg-white px-5 pb-8 pt-24 sm:px-8 lg:px-12"
+      className="flex min-h-screen lg:h-screen w-full lg:snap-start flex-col justify-center overflow-y-auto lg:overflow-hidden bg-white px-5 py-24 lg:py-8 sm:px-8 lg:px-12"
     >
       <div className="mx-auto my-auto flex w-full max-w-[1460px] flex-col items-center justify-center overflow-hidden">
-        <div className="h-[78px] w-full max-w-[1120px] sm:h-[88px] lg:h-[100px]">
+        <div className="h-auto min-h-[78px] sm:min-h-[88px] lg:h-[100px] w-full max-w-[1120px] flex items-center justify-center">
           <VaporizeTextCycle
             texts={["We Source Products From 100+ Countries"]}
             font={{

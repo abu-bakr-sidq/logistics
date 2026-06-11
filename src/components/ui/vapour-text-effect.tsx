@@ -296,7 +296,7 @@ export default function VaporizeTextCycle({
     (shouldBuildParticles: boolean) => {
       const canvas = canvasRef.current;
 
-      if (!canvas || !size.width || !size.height) {
+      if (!canvas || !size.width || !size.height || size.width < 1024) {
         return;
       }
 
@@ -396,7 +396,7 @@ export default function VaporizeTextCycle({
   }, [prepareCanvas]);
 
   useEffect(() => {
-    if (revealTrigger === 0 || !size.width || !size.height) {
+    if (revealTrigger === 0 || !size.width || !size.height || size.width < 1024) {
       return;
     }
 
@@ -460,7 +460,7 @@ export default function VaporizeTextCycle({
       className="relative flex h-full w-full items-center justify-center overflow-visible"
     >
       <canvas
-        className="absolute inset-0 block h-full w-full"
+        className="absolute inset-0 hidden lg:block h-full w-full"
         ref={canvasRef}
       />
       {createElement(

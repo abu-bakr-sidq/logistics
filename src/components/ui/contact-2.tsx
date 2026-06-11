@@ -2,7 +2,6 @@
 
 import React from "react";
 
-import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
@@ -112,24 +111,38 @@ export const Contact2 = ({
                 Contact Details
               </h3>
               <ul className="space-y-4 text-slate-600 text-sm sm:text-base">
-                <li className="flex items-center gap-3">
-                  <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[#27a8c4]/10 text-[#176579] shrink-0">
+                <li className="flex items-start gap-3">
+                  <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[#27a8c4]/10 text-[#176579] shrink-0 mt-0.5">
                     <PhoneIcon />
                   </span>
-                  <span>
-                    <strong className="text-slate-800">Phone:</strong> <span className="text-slate-700">{phone}</span>
-                  </span>
+                  <div className="flex items-start gap-1.5 py-1.5">
+                    <strong className="text-slate-800 shrink-0 text-sm sm:text-base leading-none">Phone:</strong>
+                    <div className="flex flex-col gap-2">
+                      {phone.split(" / ").map((num, idx) => {
+                        const cleanNum = num.replace(/\s+/g, "");
+                        return (
+                          <a
+                            key={idx}
+                            href={`tel:${cleanNum}`}
+                            className="text-[#176579] hover:underline hover:text-[#27a8c4] transition duration-300 font-medium whitespace-nowrap text-sm sm:text-base leading-none"
+                          >
+                            {num}
+                          </a>
+                        );
+                      })}
+                    </div>
+                  </div>
                 </li>
-                <li className="flex items-center gap-3">
-                  <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[#27a8c4]/10 text-[#176579] shrink-0">
+                <li className="flex items-start gap-3">
+                  <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[#27a8c4]/10 text-[#176579] shrink-0 mt-0.5">
                     <MailIcon />
                   </span>
-                  <span>
-                    <strong className="text-slate-800">Email:</strong>{" "}
-                    <a href={`mailto:${email}`} className="text-[#176579] hover:underline hover:text-[#27a8c4] transition duration-300 font-medium">
+                  <div className="flex items-start gap-1.5 py-1.5">
+                    <strong className="text-slate-800 shrink-0 text-sm sm:text-base leading-none">Email:</strong>{" "}
+                    <a href={`mailto:${email}`} className="text-[#176579] hover:underline hover:text-[#27a8c4] transition duration-300 font-medium text-sm sm:text-base leading-none">
                       {email}
                     </a>
-                  </span>
+                  </div>
                 </li>
               </ul>
               

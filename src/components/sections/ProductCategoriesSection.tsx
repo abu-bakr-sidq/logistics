@@ -259,7 +259,7 @@ export function ProductCategoriesSection() {
   return (
     <section
       id="product-categories"
-      className="relative box-border flex h-screen w-screen snap-start flex-col overflow-hidden bg-[#f9fafb] px-5 pb-8 pt-24 sm:px-8 lg:px-14"
+      className="relative box-border flex min-h-screen lg:h-screen w-full lg:snap-start flex-col justify-center overflow-y-auto lg:overflow-hidden bg-[#f9fafb] px-5 py-24 lg:py-8 sm:px-8 lg:px-14"
     >
       {/* Subtle background light cyan radial light aura */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(39,168,196,0.05)_0%,rgba(0,0,0,0)_60%)] pointer-events-none" />
@@ -305,7 +305,7 @@ export function ProductCategoriesSection() {
 
         <div className="space-y-4">
           {/* Row 1: Moves Left */}
-          <div className="category-marquee-mask overflow-hidden py-1.5">
+          <div className="category-marquee-mask overflow-hidden py-1.5 -mx-5 sm:-mx-8 lg:-mx-14">
             <div
               ref={refOne}
               onMouseDown={onMouseDownOne}
@@ -333,7 +333,7 @@ export function ProductCategoriesSection() {
           </div>
 
           {/* Row 2: Moves Right */}
-          <div className="category-marquee-mask overflow-hidden py-1.5">
+          <div className="category-marquee-mask overflow-hidden py-1.5 -mx-5 sm:-mx-8 lg:-mx-14">
             <div
               ref={refTwo}
               onMouseDown={onMouseDownTwo}

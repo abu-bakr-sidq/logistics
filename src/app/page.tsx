@@ -10,7 +10,7 @@ import { SourcingProcessSection } from "@/components/sections/SourcingProcessSec
 
 export default function Home() {
   return (
-    <main className="relative h-screen w-full snap-y snap-proximity overflow-y-auto overflow-x-hidden scroll-smooth bg-black [overscroll-behavior-y:contain]">
+    <main className="relative h-screen w-full lg:snap-y lg:snap-proximity overflow-y-auto overflow-x-hidden scroll-smooth bg-black [overscroll-behavior-y:contain]">
       <Navbar />
       <HeroSection />
       <BenefitsSection />

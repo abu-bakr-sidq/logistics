@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useRef, useState } from "react";
-import { Package, Globe, Clock } from "lucide-react";
+import { Package, Globe } from "lucide-react";
 import { popularProducts, type Product as PopularProduct } from "@/data/products";
 
 function PopularProductCard({
@@ -17,27 +17,27 @@ function PopularProductCard({
   return (
     <article
       onClick={onClick}
-      className={`group relative box-border h-[250px] w-[190px] shrink-0 overflow-hidden rounded-2xl border transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] sm:h-[268px] sm:w-[208px] lg:h-[280px] lg:w-[220px] cursor-pointer ${
+      className={`group relative box-border h-[170px] w-[105px] shrink-0 overflow-hidden rounded-xl border transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] sm:h-[268px] sm:w-[208px] lg:h-[280px] lg:w-[220px] cursor-pointer ${
         isActive
-          ? "border-[#27a8c4] bg-[#27a8c4]/5 shadow-[0_12px_36px_rgba(39,168,196,0.15)] ring-1 ring-[#27a8c4]/50"
-          : "border-slate-200/50 bg-white/60 shadow-[0_8px_24px_rgba(15,23,42,0.02)] backdrop-blur-md hover:border-[#27a8c4]/35 hover:-translate-y-1 hover:shadow-[0_12px_28px_rgba(39,168,196,0.06)]"
+          ? "border-[#27a8c4] bg-[#27a8c4]/5 shadow-[0_8px_24px_rgba(39,168,196,0.12)] ring-1 ring-[#27a8c4]/50"
+          : "border-slate-200/50 bg-white shadow-[0_4px_12px_rgba(15,23,42,0.02)] hover:border-[#27a8c4]/35 hover:-translate-y-1 hover:shadow-[0_8px_20px_rgba(39,168,196,0.05)]"
       }`}
     >
       {/* Product Image */}
-      <div className="relative h-[76%] overflow-hidden bg-slate-50">
+      <div className="relative h-[64%] overflow-hidden bg-slate-50">
         <Image
           alt={product.name}
           className="object-cover transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.04]"
           fill
-          sizes="280px"
+          sizes="(max-width: 640px) 110px, 280px"
           src={`/images/popular products/${product.image}`}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
       </div>
       
       {/* Product Name */}
-      <div className="relative flex h-[24%] items-center bg-transparent px-3.5">
-        <h3 className="line-clamp-2 text-xs font-semibold leading-snug text-slate-800 transition-colors duration-300 group-hover:text-[#176579] sm:text-[13px]">
+      <div className="relative flex h-[36%] items-center bg-slate-55/60 sm:bg-transparent px-2.5 sm:px-3.5 border-t border-slate-100/60 sm:border-t-0">
+        <h3 className="line-clamp-2 text-[9.5px] font-bold leading-[1.25] text-slate-800 tracking-tight transition-colors duration-300 group-hover:text-[#176579] sm:text-[13px] sm:font-semibold sm:leading-snug">
           {product.name}
         </h3>
       </div>
@@ -89,7 +89,7 @@ export function PopularProductsSection() {
   return (
     <section
       id="popular-products"
-      className="relative box-border flex h-screen w-screen snap-start flex-col overflow-hidden bg-[#f9fafb] px-5 pb-8 pt-24 sm:px-8 lg:px-14"
+      className="relative box-border flex min-h-screen lg:h-screen w-full lg:snap-start flex-col justify-center overflow-y-auto lg:overflow-hidden bg-[#f9fafb] px-5 py-24 lg:py-8 sm:px-8 lg:px-14"
     >
       {/* High-tech dot mesh overlay */}
       <div className="absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:24px_24px] opacity-[0.28] pointer-events-none" />
@@ -117,7 +117,7 @@ export function PopularProductsSection() {
         <div className="mt-6 flex flex-col gap-6 lg:flex-row lg:items-stretch lg:h-[510px] p-2 overflow-hidden">
           
           {/* Left Panel: Spotlight Console (Frosted white glass theme) */}
-          <div className="w-full lg:w-[35%] bg-white/75 border border-slate-200/50 backdrop-blur-md rounded-3xl p-5 lg:p-6 flex flex-col justify-between h-[490px] lg:h-full shadow-[0_24px_60px_rgba(15,23,42,0.06)] relative overflow-hidden">
+          <div className="hidden lg:flex lg:w-[35%] bg-white/75 border border-slate-200/50 backdrop-blur-md rounded-3xl p-5 lg:p-6 flex-col justify-between lg:h-full shadow-[0_24px_60px_rgba(15,23,42,0.06)] relative overflow-hidden lg:order-1">
             {/* Soft background radial light glow behind image and text */}
             <div className="absolute -bottom-10 -left-10 h-36 w-36 rounded-full bg-[#27a8c4]/10 blur-[40px] pointer-events-none" />
             
@@ -180,7 +180,7 @@ export function PopularProductsSection() {
           </div>
 
           {/* Right Panel: Minimalist Product Carousel */}
-          <div className="w-full lg:w-[65%] h-full flex flex-col justify-between">
+          <div className="w-full lg:w-[65%] h-auto lg:h-full flex flex-col justify-between gap-4 lg:order-2">
             <div className="flex items-center justify-between pb-3">
               <span className="text-[10px] font-extrabold uppercase tracking-widest text-[#27a8c4]">
                 Trending Sourcing Selections
@@ -208,7 +208,7 @@ export function PopularProductsSection() {
             {/* Carousel Container */}
             <div
               ref={carouselRef}
-              className="flex-1 overflow-x-auto overflow-y-hidden flex items-center gap-4 py-2 scroll-smooth select-none"
+              className="flex-1 overflow-x-auto overflow-y-hidden flex items-center gap-2.5 sm:gap-4 py-2 scroll-smooth select-none -mx-5 px-5 sm:-mx-8 sm:px-8 lg:-mx-14 lg:px-14"
               style={{ scrollbarWidth: "none" }}
             >
               {popularProducts.map((product, index) => {
@@ -218,7 +218,12 @@ export function PopularProductsSection() {
                     key={`popular-${index}-${product.name}`}
                     product={product}
                     isActive={isActive}
-                    onClick={() => setActiveProductIndex(index)}
+                    onClick={() => {
+                      setActiveProductIndex(index);
+                      if (typeof window !== "undefined" && window.innerWidth < 1024) {
+                        setInquiryProduct(product);
+                      }
+                    }}
                   />
                 );
               })}
@@ -228,6 +233,19 @@ export function PopularProductsSection() {
             <div className="text-[10px] text-slate-400 text-center mt-3 uppercase tracking-wider font-semibold">
               ← Drag, scroll, or use arrows to navigate products • Click a card to inspect specs →
             </div>
+
+            {/* Mobile Explore More Products Button */}
+            <div className="mt-4 flex justify-center lg:hidden">
+              <a
+                href="/categories"
+                className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-[#27a8c4] to-[#176579] hover:from-[#3cd5f7] hover:to-[#27a8c4] px-6 py-3 text-xs font-bold text-white transition-all shadow-[0_4px_16px_rgba(39,168,196,0.15)] active:scale-[0.98] cursor-pointer"
+              >
+                Explore More Products
+                <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
           </div>
           
         </div>
@@ -236,15 +254,18 @@ export function PopularProductsSection() {
 
       {/* RFQ Inquiry Modal overlay */}
       {inquiryProduct && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/40 backdrop-blur-sm animate-[timeline-fade-in_200ms_ease-out]">
-          <div className="w-full max-w-lg overflow-hidden rounded-3xl border border-slate-200 bg-white/95 p-6 shadow-2xl backdrop-blur-md animate-[product-category-in_300ms_cubic-bezier(0.16,1,0.3,1)_both]">
+        <div className="fixed inset-0 z-50 flex items-end justify-center lg:items-center p-0 lg:p-4 bg-slate-900/40 backdrop-blur-sm animate-[timeline-fade-in_200ms_ease-out]">
+          <div className="w-full lg:max-w-lg max-h-[92vh] lg:max-h-none overflow-hidden rounded-t-3xl lg:rounded-3xl border border-slate-200 bg-white/95 p-6 shadow-2xl backdrop-blur-md animate-[product-category-in_300ms_cubic-bezier(0.16,1,0.3,1)_both] flex flex-col">
+            {/* Drag Handle for Mobile */}
+            <div className="w-12 h-1.5 bg-slate-200 rounded-full mx-auto mb-4 lg:hidden shrink-0" />
+
             {/* Modal Header */}
-            <div className="flex items-start justify-between border-b border-slate-100 pb-4">
+            <div className="flex items-start justify-between border-b border-slate-100 pb-4 shrink-0">
               <div>
                 <span className="text-[10px] font-bold tracking-[0.16em] text-[#27a8c4] uppercase">
                   RFQ CONSOLE
                 </span>
-                <h3 className="text-lg font-bold text-slate-900 mt-1">
+                <h3 className="text-base lg:text-lg font-bold text-slate-900 mt-1">
                   Inquire: {inquiryProduct.name}
                 </h3>
               </div>
@@ -258,42 +279,73 @@ export function PopularProductsSection() {
               </button>
             </div>
 
-            {submitted ? (
-              /* Success Animation */
-              <div className="py-12 text-center animate-[timeline-fade-in_250ms_ease-out]">
-                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-teal-50 text-teal-500 border border-teal-100 shadow-[0_4px_16px_rgba(20,184,166,0.15)] mb-4">
-                  <svg className="h-8 w-8 animate-[timeline-pulse_1.5s_infinite]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
-                  </svg>
+            {/* Scrollable Container */}
+            <div className="flex-1 overflow-y-auto mt-4 pr-0.5" style={{ scrollbarWidth: "none" }}>
+              {/* Product overview card (mobile only) */}
+              <div className="lg:hidden bg-gradient-to-br from-white to-slate-50/80 rounded-2xl p-4 border border-slate-150/50 flex gap-4 items-center mb-5 shadow-[0_8px_30px_rgba(15,23,42,0.03)]">
+                <div className="relative h-20 w-20 rounded-xl overflow-hidden border border-slate-200/60 bg-white shrink-0 shadow-sm">
+                  <Image
+                    alt={inquiryProduct.name}
+                    className="object-cover"
+                    fill
+                    sizes="80px"
+                    src={`/images/popular products/${inquiryProduct.image}`}
+                  />
                 </div>
-                <h4 className="text-base font-extrabold text-slate-900">RFQ Request Submitted!</h4>
-                <p className="mt-2 text-xs text-slate-500 max-w-xs mx-auto">
-                  Your sourcing inquiry has been successfully transmitted. Affhan Group managers will respond via email with details and freight pricing.
-                </p>
+                <div className="flex-1 min-w-0">
+                  <span className="text-[9px] font-bold uppercase tracking-wider text-slate-400 block">
+                    {inquiryProduct.category}
+                  </span>
+                  <h4 className="text-sm font-bold text-slate-900 truncate mt-0.5">
+                    {inquiryProduct.name}
+                  </h4>
+                  
+                  {/* Compact specs rows */}
+                  <div className="mt-2.5 flex gap-2.5 text-[10px] text-slate-650 font-medium">
+                    <span className="bg-[#27a8c4]/8 px-2.5 py-1 rounded-lg border border-[#27a8c4]/15 text-[10px] font-semibold text-[#176579] shadow-sm">
+                      MOQ: <span className="font-extrabold">{inquiryProduct.moq}</span>
+                    </span>
+                    <span className="bg-slate-100/60 px-2.5 py-1 rounded-lg border border-slate-200/50 text-[10px] font-semibold text-slate-700 shadow-sm">
+                      Origin: <span className="font-extrabold">{inquiryProduct.region.split(" ")[0]}</span>
+                    </span>
+                  </div>
+                </div>
               </div>
-            ) : (
-              /* Form */
-              <form onSubmit={handleInquirySubmit} className="mt-4 space-y-4">
-                <div className="grid grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-[10px] font-bold tracking-wider text-slate-400 uppercase mb-1.5">
+
+              {submitted ? (
+                /* Success Animation */
+                <div className="py-12 text-center animate-[timeline-fade-in_250ms_ease-out]">
+                  <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-teal-50 text-teal-500 border border-teal-100 shadow-[0_4px_16px_rgba(20,184,166,0.15)] mb-4">
+                    <svg className="h-8 w-8 animate-[timeline-pulse_1.5s_infinite]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <h4 className="text-base font-extrabold text-slate-900">RFQ Request Submitted!</h4>
+                  <p className="mt-2 text-xs text-slate-500 max-w-xs mx-auto">
+                    Your sourcing inquiry has been successfully transmitted. Affhan Group managers will respond via email with details and freight pricing.
+                  </p>
+                </div>
+              ) : (
+                /* Form */
+                <form onSubmit={handleInquirySubmit} className="space-y-4">
+                  <div className="grid grid-cols-2 gap-x-4 gap-y-1.5">
+                    <label className="block text-[10px] font-bold tracking-wider text-slate-500 uppercase flex items-start min-h-[28px] leading-tight">
                       Target Quantity (MOQ: {inquiryProduct.moq})
                     </label>
+                    <label className="block text-[10px] font-bold tracking-wider text-slate-500 uppercase flex items-start min-h-[28px] leading-tight">
+                      Sourcing Timeline
+                    </label>
+
                     <input
                       type="number"
                       required
                       min={parseInt(inquiryProduct.moq)}
-                      className="block w-full rounded-xl border border-slate-200/80 bg-slate-50/50 px-3.5 py-2.5 text-xs text-slate-900 focus:border-[#27a8c4] focus:ring-1 focus:ring-[#27a8c4] focus:outline-none"
+                      className="block w-full h-11 rounded-xl border border-slate-200/85 bg-white px-4 py-2.5 text-xs text-slate-900 focus:border-[#27a8c4] focus:ring-4 focus:ring-[#27a8c4]/8 focus:outline-none transition-all duration-200 shadow-sm"
                       value={inquiryForm.qty}
                       onChange={(e) => setInquiryForm({ ...inquiryForm, qty: e.target.value })}
                     />
-                  </div>
-                  <div>
-                    <label className="block text-[10px] font-bold tracking-wider text-slate-400 uppercase mb-1.5">
-                      Sourcing Timeline
-                    </label>
                     <select
-                      className="block w-full rounded-xl border border-slate-200/80 bg-slate-50/50 px-3.5 py-2.5 text-xs text-slate-900 focus:border-[#27a8c4] focus:ring-1 focus:ring-[#27a8c4] focus:outline-none"
+                      className="block w-full h-11 rounded-xl border border-slate-200/85 bg-white px-4 py-2.5 text-xs text-slate-900 focus:border-[#27a8c4] focus:ring-4 focus:ring-[#27a8c4]/8 focus:outline-none transition-all duration-200 shadow-sm appearance-none bg-[url('data:image/svg+xml;utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23475569%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E')] bg-[length:14px_14px] bg-[right_16px_center] bg-no-repeat pr-10"
                       value={inquiryForm.timeline}
                       onChange={(e) => setInquiryForm({ ...inquiryForm, timeline: e.target.value })}
                     >
@@ -303,52 +355,51 @@ export function PopularProductsSection() {
                       <option>Planning / Ongoing Sourcing</option>
                     </select>
                   </div>
-                </div>
+                  <div>
+                    <label className="block text-[10px] font-bold tracking-wider text-slate-500 uppercase mb-1.5">
+                      Your Contact Email
+                    </label>
+                    <input
+                      type="email"
+                      required
+                      placeholder="buyer@company.com"
+                      className="block w-full rounded-xl border border-slate-200/85 bg-white px-4 py-3 text-xs text-slate-900 focus:border-[#27a8c4] focus:ring-4 focus:ring-[#27a8c4]/8 focus:outline-none transition-all duration-200 shadow-sm"
+                      value={inquiryForm.email}
+                      onChange={(e) => setInquiryForm({ ...inquiryForm, email: e.target.value })}
+                    />
+                  </div>
 
-                <div>
-                  <label className="block text-[10px] font-bold tracking-wider text-slate-400 uppercase mb-1.5">
-                    Your Contact Email
-                  </label>
-                  <input
-                    type="email"
-                    required
-                    placeholder="buyer@company.com"
-                    className="block w-full rounded-xl border border-slate-200/80 bg-slate-50/50 px-3.5 py-2.5 text-xs text-slate-900 focus:border-[#27a8c4] focus:ring-1 focus:ring-[#27a8c4] focus:outline-none"
-                    value={inquiryForm.email}
-                    onChange={(e) => setInquiryForm({ ...inquiryForm, email: e.target.value })}
-                  />
-                </div>
+                  <div>
+                    <label className="block text-[10px] font-bold tracking-wider text-slate-500 uppercase mb-1.5">
+                      Custom Specifications / Branding Requests
+                    </label>
+                    <textarea
+                      rows={3}
+                      placeholder="Enter packaging design requests, logo embossing, shipping terms (FOB/DDP), or target price limits..."
+                      className="block w-full rounded-xl border border-slate-200/85 bg-white px-4 py-3 text-xs text-slate-900 focus:border-[#27a8c4] focus:ring-4 focus:ring-[#27a8c4]/8 focus:outline-none resize-none transition-all duration-200 shadow-sm"
+                      value={inquiryForm.details}
+                      onChange={(e) => setInquiryForm({ ...inquiryForm, details: e.target.value })}
+                    />
+                  </div>
 
-                <div>
-                  <label className="block text-[10px] font-bold tracking-wider text-slate-400 uppercase mb-1.5">
-                    Custom Specifications / Branding Requests
-                  </label>
-                  <textarea
-                    rows={3}
-                    placeholder="Enter packaging design requests, logo embossing, shipping terms (FOB/DDP), or target price limits..."
-                    className="block w-full rounded-xl border border-slate-200/80 bg-slate-50/50 px-3.5 py-2.5 text-xs text-slate-900 focus:border-[#27a8c4] focus:ring-1 focus:ring-[#27a8c4] focus:outline-none resize-none"
-                    value={inquiryForm.details}
-                    onChange={(e) => setInquiryForm({ ...inquiryForm, details: e.target.value })}
-                  />
-                </div>
-
-                <div className="pt-2 border-t border-slate-100 flex gap-3">
-                  <button
-                    type="button"
-                    onClick={() => setInquiryProduct(null)}
-                    className="flex-1 rounded-xl border border-slate-200 py-3 text-xs font-bold text-slate-600 hover:bg-slate-50 hover:text-slate-800 transition-all cursor-pointer"
-                  >
-                    Cancel
-                  </button>
-                  <button
-                    type="submit"
-                    className="flex-1 rounded-xl bg-gradient-to-r from-[#27a8c4] to-[#176579] py-3 text-xs font-bold text-white transition-all shadow-[0_4px_12px_rgba(39,168,196,0.25)] hover:opacity-95 cursor-pointer"
-                  >
-                    Send Request
-                  </button>
-                </div>
-              </form>
-            )}
+                  <div className="pt-2 border-t border-slate-100 flex gap-3 pb-4">
+                    <button
+                      type="button"
+                      onClick={() => setInquiryProduct(null)}
+                      className="flex-1 rounded-xl border border-slate-250 bg-slate-50/40 py-3 text-xs font-bold text-slate-600 hover:bg-slate-100/80 hover:text-slate-800 transition-all cursor-pointer"
+                    >
+                      Cancel
+                    </button>
+                    <button
+                      type="submit"
+                      className="flex-1 rounded-xl bg-gradient-to-r from-[#27a8c4] to-[#176579] py-3 text-xs font-bold text-white transition-all shadow-[0_4px_16px_rgba(39,168,196,0.25)] hover:opacity-95 hover:shadow-[0_6px_20px_rgba(39,168,196,0.35)] cursor-pointer"
+                    >
+                      Send Request
+                    </button>
+                  </div>
+                </form>
+              )}
+            </div>
           </div>
         </div>
       )}

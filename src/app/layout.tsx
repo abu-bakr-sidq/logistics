@@ -5,11 +5,15 @@ import "./globals.css";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  display: "swap",
+  preload: false,
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  display: "swap",
+  preload: false,
 });
 
 export const metadata: Metadata = {
@@ -28,8 +32,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`} data-scroll-behavior="smooth">
-      <body className="font-[family-name:var(--font-geist-sans)]">{children}</body>
+    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} overflow-x-hidden`} data-scroll-behavior="smooth">
+      <body className="font-[family-name:var(--font-geist-sans)] overflow-x-hidden w-full relative">{children}</body>
     </html>
   );
 }

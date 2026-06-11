@@ -38,7 +38,7 @@ export function AnimatedStatNumber({
   }, [runId, value]);
 
   return (
-    <strong className="stat-number-pop block text-[34px] font-medium leading-none tracking-[-0.02em] text-[#1f5369] sm:text-[42px]">
+    <strong className="stat-number-pop block text-[22px] font-medium leading-none tracking-[-0.02em] text-[#1f5369] sm:text-[42px]">
       {displayValue}
       {suffix}
     </strong>
