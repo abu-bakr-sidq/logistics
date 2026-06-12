@@ -177,47 +177,80 @@ export const OfficeLocations = () => {
 
   return (
     <section id="locations" className="relative bg-gradient-to-b from-[#f8fafc] via-[#f1f5f9] to-[#e2e8f0] text-slate-900 pb-20 pt-8 scroll-mt-24 overflow-hidden">
-      <style dangerouslySetInnerHTML={{ __html: `
+      <style dangerouslySetInnerHTML={{
+        __html: `
+        @keyframes waterFlow {
+          0% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+          100% { background-position: 0% 50%; }
+        }
+        @keyframes waveMove1 {
+          0% { transform: translate3d(0, 0, 0); }
+          50% { transform: translate3d(-25%, 8px, 0); }
+          100% { transform: translate3d(0, 0, 0); }
+        }
+        @keyframes waveMove2 {
+          0% { transform: translate3d(-25%, 0, 0); }
+          50% { transform: translate3d(0, -6px, 0); }
+          100% { transform: translate3d(-25%, 0, 0); }
+        }
+
         .liquid-glass-card {
-          background: linear-gradient(135deg, rgba(255, 255, 255, 0.55) 0%, rgba(240, 253, 250, 0.3) 100%) !important;
-          backdrop-filter: blur(24px) !important;
-          -webkit-backdrop-filter: blur(24px) !important;
-          border-top: 2px solid rgba(255, 255, 255, 0.9) !important;
-          border-left: 2px solid rgba(255, 255, 255, 0.9) !important;
-          border-bottom: 2px solid rgba(148, 163, 184, 0.35) !important;
-          border-right: 2px solid rgba(148, 163, 184, 0.35) !important;
+          background: linear-gradient(-45deg, rgba(255, 255, 255, 0.65) 0%, rgba(224, 242, 254, 0.45) 35%, rgba(204, 251, 241, 0.4) 70%, rgba(255, 255, 255, 0.7) 100%) !important;
+          background-size: 240% 240% !important;
+          animation: waterFlow 12s ease infinite !important;
+          backdrop-filter: blur(20px) !important;
+          -webkit-backdrop-filter: blur(20px) !important;
+          border-top: 2px solid rgba(255, 255, 255, 0.95) !important;
+          border-left: 2px solid rgba(255, 255, 255, 0.95) !important;
+          border-bottom: 2px solid rgba(148, 163, 184, 0.3) !important;
+          border-right: 2px solid rgba(148, 163, 184, 0.3) !important;
           border-radius: 28px !important;
           box-shadow: 
             inset 0 3px 10px rgba(255, 255, 255, 0.95), 
-            inset 0 -3px 10px rgba(0, 0, 0, 0.04),
-            inset 0 1px 18px rgba(255, 255, 255, 0.45),
-            0 12px 32px rgba(15, 23, 42, 0.06),
-            0 1px 3px rgba(0, 0, 0, 0.02) !important;
-          transition: all 0.45s cubic-bezier(0.16, 1, 0.3, 1) !important;
-          will-change: transform, box-shadow, background-color, border-color;
+            inset 0 -3px 10px rgba(0, 0, 0, 0.03),
+            0 12px 32px rgba(15, 23, 42, 0.05) !important;
+          transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1) !important;
+          will-change: transform, box-shadow, background-position;
         }
 
         .liquid-glass-card:hover {
-          background: linear-gradient(135deg, rgba(255, 255, 255, 0.75) 0%, rgba(240, 253, 250, 0.4) 100%) !important;
+          background: linear-gradient(-45deg, rgba(255, 255, 255, 0.8) 0%, rgba(224, 242, 254, 0.55) 35%, rgba(204, 251, 241, 0.5) 70%, rgba(255, 255, 255, 0.85) 100%) !important;
           border-top-color: rgba(255, 255, 255, 0.99) !important;
           border-left-color: rgba(255, 255, 255, 0.99) !important;
-          border-bottom-color: rgba(148, 163, 184, 0.55) !important;
-          border-right-color: rgba(148, 163, 184, 0.55) !important;
+          border-bottom-color: rgba(148, 163, 184, 0.45) !important;
+          border-right-color: rgba(148, 163, 184, 0.45) !important;
           box-shadow: 
             inset 0 5px 15px rgba(255, 255, 255, 0.98), 
-            inset 0 -5px 15px rgba(0, 0, 0, 0.05),
-            inset 0 1px 25px rgba(255, 255, 255, 0.6),
-            0 24px 50px rgba(39, 168, 196, 0.16),
-            0 4px 12px rgba(0, 0, 0, 0.03) !important;
+            inset 0 -5px 15px rgba(0, 0, 0, 0.04),
+            0 24px 50px rgba(39, 168, 196, 0.18),
+            0 4px 12px rgba(0, 0, 0, 0.02) !important;
           transform: translateY(-8px) scale(1.015) !important;
         }
 
         .liquid-glass-card:active {
           transform: translateY(-3px) scale(0.99) !important;
           box-shadow: 
-            inset 0 2px 6px rgba(255, 255, 255, 0.9), 
-            inset 0 -2px 6px rgba(0, 0, 0, 0.05), 
+            inset 0 2px 6px rgba(255, 255, 255, 0.95), 
+            inset 0 -2px 6px rgba(0, 0, 0, 0.04), 
             0 12px 25px rgba(39, 168, 196, 0.08) !important;
+        }
+
+        .wave-container {
+          height: 40px;
+          transition: height 0.65s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
+          opacity: 0.35;
+        }
+        .liquid-glass-card:hover .wave-container {
+          height: 110px;
+          opacity: 0.65;
+        }
+
+        .animate-wave1 {
+          animation: waveMove1 14s ease-in-out infinite;
+        }
+        .animate-wave2 {
+          animation: waveMove2 10s ease-in-out infinite;
         }
       `}} />
       {/* Background Dot Grid Matrix & Radial Glows */}
@@ -226,7 +259,7 @@ export const OfficeLocations = () => {
       <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-[#176579]/5 rounded-full blur-[100px] pointer-events-none" />
 
       <div className="container relative z-10 mx-auto px-5 sm:px-8 lg:px-14">
-        
+
         <div className="text-center mb-8 relative">
           <span className="text-xs font-semibold uppercase tracking-[0.26em] text-[#176579]">
             OUR LOCATIONS
@@ -238,7 +271,7 @@ export const OfficeLocations = () => {
           <p className="text-slate-600 text-sm max-w-xl mx-auto leading-relaxed">
             Operating across 7 key international manufacturing and trading hubs to coordinate your logistics and sourcing operations seamlessly.
           </p>
-          
+
           {/* Arrow navigation buttons in header for cleaner spacing on small folds */}
           <div className="flex justify-center items-center gap-3 mt-4">
             <button
@@ -273,50 +306,63 @@ export const OfficeLocations = () => {
                 key={idx}
                 className="group relative flex flex-col justify-between p-6 w-[285px] sm:w-[320px] shrink-0 overflow-hidden min-h-[265px] liquid-glass-card"
               >
-                {/* Top border indicator */}
-                <div className="absolute top-0 left-0 right-0 h-1.5 bg-[#27a8c4] rounded-t-[28px] opacity-60 group-hover:opacity-100 transition-opacity duration-300" />
-                
-                <div>
-                  {/* Badge with inline SVG flag */}
-                  <span className="inline-flex items-center gap-2 rounded-full bg-[#27a8c4]/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-[#176579] border border-[#27a8c4]/15">
-                    <CountryFlag country={office.country} />
-                    {office.badge}
-                  </span>
+                {/* Decorative Liquid Water Glow Blobs */}
+                <div className="absolute -right-6 -bottom-6 w-24 h-24 rounded-full bg-cyan-300/10 blur-xl pointer-events-none group-hover:bg-cyan-400/20 group-hover:scale-125 transition-all duration-700 z-0" />
+                <div className="absolute -left-6 -top-6 w-24 h-24 rounded-full bg-teal-300/10 blur-xl pointer-events-none group-hover:bg-teal-400/20 group-hover:scale-125 transition-all duration-700 z-0" />
 
-                  {/* Name */}
-                  <h3 className="mt-4 text-sm sm:text-base font-bold text-slate-900 tracking-tight leading-snug">
-                    {office.name}
-                  </h3>
-
-                  {/* Address */}
-                  <p className="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
-                    {office.address}
-                  </p>
+                {/* SVG Animated Waves (Water Splash effect) */}
+                <div className="absolute bottom-0 left-0 right-0 w-full pointer-events-none overflow-hidden z-0 wave-container">
+                  <svg className="absolute w-[200%] h-full bottom-0 left-0 animate-wave1" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M0,60 Q150,85 300,60 T600,60 T900,60 T1200,60 L1200,120 L0,120 Z" fill="url(#wave-grad-1)" />
+                  </svg>
+                  <svg className="absolute w-[200%] h-full bottom-0 left-0 animate-wave2" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M0,50 Q150,25 300,50 T600,50 T900,50 T1200,50 L1200,120 L0,120 Z" fill="url(#wave-grad-2)" />
+                  </svg>
                 </div>
 
-                {/* Phone */}
-                {office.phone && (
-                  <div className="mt-4 pt-3 border-t border-slate-100 flex items-start gap-2.5 text-xs text-[#176579] font-semibold">
-                    <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[#27a8c4]/15 text-[#176579] group-hover:scale-110 group-hover:rotate-12 transition-all duration-300 shrink-0 mt-0.5">
-                      <Phone className="h-3 w-3 text-[#27a8c4]" />
+                <div className="relative z-10 flex flex-col justify-between h-full w-full">
+                  <div>
+                    {/* Badge with inline SVG flag */}
+                    <span className="inline-flex items-center gap-2 rounded-full bg-[#27a8c4]/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-[#176579] border border-[#27a8c4]/15">
+                      <CountryFlag country={office.country} />
+                      {office.badge}
                     </span>
-                    <div className="flex flex-col gap-0.5 min-w-0">
-                      {office.phone.split(" / ").map((num, i) => {
-                        const cleanNum = num.replace(/\s+/g, "");
-                        return (
-                          <a
-                            key={i}
-                            href={`tel:${cleanNum}`}
-                            className="hover:underline hover:text-[#27a8c4] transition duration-300 truncate"
-                            title={num}
-                          >
-                            {num}
-                          </a>
-                        );
-                      })}
-                    </div>
+
+                    {/* Name */}
+                    <h3 className="mt-4 text-sm sm:text-base font-bold text-slate-900 tracking-tight leading-snug">
+                      {office.name}
+                    </h3>
+
+                    {/* Address */}
+                    <p className="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
+                      {office.address}
+                    </p>
                   </div>
-                )}
+
+                  {/* Phone */}
+                  {office.phone && (
+                    <div className="mt-4 pt-3 border-t border-slate-100 flex items-start gap-2.5 text-xs text-[#176579] font-semibold">
+                      <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[#27a8c4]/15 text-[#176579] group-hover:scale-110 group-hover:rotate-12 transition-all duration-300 shrink-0 mt-0.5">
+                        <Phone className="h-3 w-3 text-[#27a8c4]" />
+                      </span>
+                      <div className="flex flex-col gap-0.5 min-w-0">
+                        {office.phone.split(" / ").map((num, i) => {
+                          const cleanNum = num.replace(/\s+/g, "");
+                          return (
+                            <a
+                              key={i}
+                              href={`tel:${cleanNum}`}
+                              className="hover:underline hover:text-[#27a8c4] transition duration-300 truncate"
+                              title={num}
+                            >
+                              {num}
+                            </a>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  )}
+                </div>
 
                 {/* Bottom growing glowing accent line */}
                 <div className="absolute bottom-0 left-0 h-[3px] bg-gradient-to-r from-[#27a8c4] to-[#176579] w-0 group-hover:w-full transition-all duration-500 ease-out shadow-[0_0_8px_rgba(39,168,196,0.4)]" />
@@ -324,8 +370,22 @@ export const OfficeLocations = () => {
             ))}
           </div>
         </div>
-        
+
       </div>
+
+      {/* Wave SVG gradients definition */}
+      <svg style={{ position: "absolute", width: 0, height: 0, overflow: "hidden" }} aria-hidden="true">
+        <defs>
+          <linearGradient id="wave-grad-1" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stopColor="#27a8c4" stopOpacity="0.45" />
+            <stop offset="100%" stopColor="#176579" stopOpacity="0.85" />
+          </linearGradient>
+          <linearGradient id="wave-grad-2" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stopColor="#3cd5f7" stopOpacity="0.35" />
+            <stop offset="100%" stopColor="#27a8c4" stopOpacity="0.75" />
+          </linearGradient>
+        </defs>
+      </svg>
     </section>
   );
 };

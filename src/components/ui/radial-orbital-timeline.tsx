@@ -3,7 +3,8 @@
 import { useEffect, useRef, useState } from "react";
 import type { ElementType, MouseEvent } from "react";
 import Image from "next/image";
-import { X } from "lucide-react";
+import { X, Check } from "lucide-react";
+import { motion } from "framer-motion";
 
 export interface TimelineItem {
   id: number;
@@ -327,7 +328,7 @@ export default function RadialOrbitalTimeline({
 
   return (
     <div
-      className="flex h-auto lg:h-full w-full flex-col items-center justify-center lg:overflow-hidden bg-[#245b6d]"
+      className="flex h-auto lg:h-full w-full flex-col items-center justify-center lg:overflow-hidden bg-transparent"
       ref={containerRef}
       onClick={handleContainerClick}
       onMouseEnter={() => setIsHovered(true)}
@@ -766,69 +767,137 @@ export default function RadialOrbitalTimeline({
 
       {/* Mobile / Tablet Vertical Stepper Timeline (lg:hidden) */}
       <div className="lg:hidden flex w-full flex-col gap-6 px-4 py-8 pointer-events-auto">
-        <div className="relative w-full max-w-xl mx-auto flex flex-col gap-8 py-6">
-          {/* Vertical pipeline guide */}
-          <div className="absolute left-[23px] top-4 bottom-4 w-[2px] bg-gradient-to-b from-[#27a8c4]/80 via-white/20 to-[#27a8c4]/80" />
-
-          {timelineData.map((item) => {
+        <motion.div
+          variants={{
+            hidden: { opacity: 0 },
+            show: {
+              opacity: 1,
+              transition: {
+                staggerChildren: 0.1,
+              },
+            },
+          }}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: "-100px" }}
+          className="relative w-full max-w-xl mx-auto flex flex-col gap-8 py-6"
+        >
+          {timelineData.map((item, index) => {
             const Icon = item.icon;
             const checklist = stepChecklists[item.id];
             const isCompleted = item.status === "completed";
             const isInProgress = item.status === "in-progress";
 
             return (
-              <div key={item.id} className="relative pl-14 flex flex-col">
+              <motion.div
+                variants={{
+                  hidden: { opacity: 0, y: 20, scale: 0.95 },
+                  show: {
+                    opacity: 1,
+                    y: 0,
+                    scale: 1,
+                    transition: {
+                      type: "spring",
+                      stiffness: 100,
+                      damping: 15,
+                    },
+                  },
+                }}
+                key={item.id}
+                className="relative flex flex-col items-center group w-full"
+              >
+                {/* Glowing line segment to next node or last card */}
+                {index < timelineData.length - 1 ? (
+                  <div className="absolute left-1/2 -translate-x-1/2 top-[20px] bottom-[-56px] w-[2px] bg-gradient-to-b from-[#27a8c4] via-[#3cd5f7] to-[#27a8c4] opacity-50 shadow-[0_0_8px_rgba(60,213,247,0.4)] animate-[pulse_2s_infinite] z-0" />
+                ) : (
+                  <div className="absolute left-1/2 -translate-x-1/2 top-[20px] bottom-[40px] w-[2px] bg-gradient-to-b from-[#27a8c4] via-[#3cd5f7] to-[#27a8c4] opacity-50 shadow-[0_0_8px_rgba(60,213,247,0.4)] animate-[pulse_2s_infinite] z-0" />
+                )}
+
                 {/* Glowing node on line */}
                 <div
-                  className={`absolute left-2 top-0.5 flex h-9.5 w-9.5 items-center justify-center rounded-full border-2 transition-all duration-300 ${
+                  className={`relative z-20 mx-auto flex h-10 w-10 items-center justify-center rounded-full border-2 transition-all duration-300 ${
                     isCompleted
-                      ? "bg-[#1f5369] border-[#27a8c4] text-white shadow-[0_0_12px_rgba(39,168,196,0.45)]"
+                      ? "bg-white border-[#27a8c4] text-[#176579] shadow-[0_0_12px_rgba(39,168,196,0.45)]"
                       : isInProgress
-                      ? "bg-white border-[#27a8c4] text-[#176579] animate-pulse shadow-[0_0_18px_rgba(39,168,196,0.65)] ring-4 ring-[#27a8c4]/20"
-                      : "bg-[#133744] border-slate-350 text-slate-300/80"
+                      ? "bg-white border-[#27a8c4] text-[#27a8c4] shadow-[0_0_18px_rgba(39,168,196,0.65)] ring-4 ring-[#27a8c4]/20 animate-pulse"
+                      : "bg-white border-[#27a8c4]/40 text-[#176579]/65 shadow-[0_0_10px_rgba(39,168,196,0.2)]"
                   }`}
                 >
-                  <Icon size={15} />
+                  <Icon size={16} />
                 </div>
 
                 {/* Stepper Card */}
-                <div className="w-full rounded-2xl border border-white/10 bg-white/[0.03] p-5 backdrop-blur-md shadow-md hover:border-[#27a8c4]/30 hover:bg-white/[0.05] transition-all duration-300">
+                <div
+                  className={`w-full relative z-10 mt-4 rounded-3xl border transition-all duration-500 p-6 sm:p-7 bg-white ${
+                    isCompleted
+                      ? "border-emerald-100/50 shadow-xl shadow-emerald-950/[0.01] hover:shadow-2xl hover:border-emerald-200/50"
+                      : isInProgress
+                      ? "border-[#27a8c4]/80 shadow-[0_20px_50px_rgba(39,168,196,0.18)] ring-2 ring-[#27a8c4]/10"
+                      : "border-slate-100 shadow-md shadow-slate-950/[0.01]"
+                  }`}
+                >
                   {/* Header info */}
-                  <div className="flex items-center justify-between gap-2">
-                    <span className={`text-[9px] font-mono font-bold uppercase tracking-wider rounded-full px-2.5 py-0.5 border ${
-                      isCompleted
-                        ? "bg-[#27a8c4]/20 border-[#27a8c4]/40 text-[#3cd5f7]"
-                        : isInProgress
-                        ? "bg-[#27a8c4]/30 border-[#27a8c4] text-white animate-pulse"
-                        : "bg-white/5 border-white/10 text-white/50"
-                    }`}>
+                  <div className="flex items-center justify-center gap-3">
+                    <span
+                      className={`text-[9px] font-mono font-black uppercase tracking-wider rounded-full px-2.5 py-0.5 border whitespace-nowrap shrink-0 ${
+                        isCompleted
+                          ? "bg-emerald-50 border-emerald-100/60 text-emerald-700"
+                          : isInProgress
+                          ? "bg-[#27a8c4]/10 border-[#27a8c4]/30 text-[#176579]"
+                          : "bg-slate-100 border-slate-200 text-slate-500"
+                      }`}
+                    >
                       {item.date}
                     </span>
-                    <span className="text-[10px] font-bold uppercase tracking-widest text-[#3cd5f7]/85">
+                    <span className={`text-[10px] font-black uppercase tracking-[0.12em] text-right truncate ${
+                      isCompleted ? "text-emerald-600" : isInProgress ? "text-[#27a8c4]" : "text-slate-500"
+                    }`}>
                       {item.category}
                     </span>
                   </div>
 
                   {/* Title */}
-                  <h3 className="mt-2 text-base font-extrabold text-white">
+                  <h3 className={`mt-3.5 text-xl font-extrabold tracking-tight leading-tight text-center ${
+                    isCompleted ? "text-slate-950" : isInProgress ? "text-[#164250]" : "text-slate-800"
+                  }`}>
                     {item.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="mt-2 text-xs leading-relaxed text-slate-300">
+                  <p className={`mt-2 text-xs sm:text-sm font-semibold leading-relaxed text-center ${
+                    isCompleted || isInProgress ? "text-slate-800" : "text-slate-600"
+                  }`}>
                     {item.content}
                   </p>
 
                   {/* Deliverables List */}
                   {checklist && (
-                    <div className="mt-4 border-t border-white/5 pt-3">
-                      <span className="text-[10px] font-extrabold uppercase tracking-wider text-[#3cd5f7] block mb-2">
+                    <div className={`mt-4 border-t pt-3.5 flex flex-col items-center ${
+                      isCompleted ? "border-emerald-50" : isInProgress ? "border-slate-100" : "border-slate-100"
+                    }`}>
+                      <span className={`text-[10px] font-black uppercase tracking-[0.12em] block mb-3 text-center ${
+                        isCompleted ? "text-emerald-700" : isInProgress ? "text-[#176579]" : "text-slate-600"
+                      }`}>
                         {checklist.title}
                       </span>
-                      <ul className="space-y-2">
+                      <ul className="space-y-3 w-fit mx-auto">
                         {checklist.items.map((bullet, idx) => (
-                          <li key={idx} className="flex items-start gap-2 text-[11px] text-slate-200/90 leading-normal">
-                            <span className="mt-1 flex h-1 w-1 shrink-0 rounded-full bg-[#3cd5f7]" />
+                          <li key={idx} className={`flex items-start gap-3 text-xs sm:text-sm font-bold leading-relaxed ${
+                            isCompleted || isInProgress ? "text-slate-800" : "text-slate-600"
+                          }`}>
+                            {isCompleted ? (
+                              <div className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-emerald-500 text-white mt-0.5 shadow-sm">
+                                <Check size={11} strokeWidth={4} />
+                              </div>
+                            ) : isInProgress ? (
+                              <div className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#27a8c4] text-white mt-0.5 shadow-sm">
+                                <Check size={11} strokeWidth={4} />
+                              </div>
+                            ) : (
+                              <div className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-slate-100 text-slate-400 mt-0.5 border border-slate-200/60">
+                                <Check size={11} strokeWidth={3} />
+                              </div>
+                            )}
                             <span>{bullet}</span>
                           </li>
                         ))}
@@ -836,10 +905,10 @@ export default function RadialOrbitalTimeline({
                     </div>
                   )}
                 </div>
-              </div>
+              </motion.div>
             );
           })}
-        </div>
+        </motion.div>
       </div>
     </div>
   );

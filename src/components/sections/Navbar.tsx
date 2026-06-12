@@ -500,7 +500,7 @@ export function Navbar() {
         {mounted && (
           <>
             {/* Search Shortcut */}
-            {!showNavbarSearch && pathname !== "/" && (
+            {!showNavbarSearch && pathname !== "/" && !pathname.startsWith("/categories") && (
               <Link
                 href="/categories"
                 onClick={() => setMobileMenuOpen(false)}

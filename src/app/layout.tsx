@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,7 +29,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable} overflow-x-hidden`} data-scroll-behavior="smooth">
-      <body className="font-[family-name:var(--font-geist-sans)] overflow-x-hidden w-full relative">{children}</body>
+      <body className="font-[family-name:var(--font-geist-sans)] overflow-x-hidden w-full relative">
+        {children}
+        <WhatsAppButton />
+      </body>
     </html>
   );
 }

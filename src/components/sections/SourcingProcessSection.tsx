@@ -61,7 +61,7 @@ const sourcingTimelineData: TimelineItem[] = [
     category: "Commercial",
     icon: CreditCard,
     relatedIds: [3, 5],
-    status: "completed",
+    status: "in-progress",
     energy: 78,
   },
   {
@@ -85,7 +85,7 @@ const sourcingTimelineData: TimelineItem[] = [
     category: "Inspection",
     icon: ShieldCheck,
     relatedIds: [5, 7],
-    status: "pending",
+    status: "in-progress",
     energy: 58,
   },
   {
@@ -130,9 +130,9 @@ export function SourcingProcessSection() {
   return (
     <section
       id="sourcing-process"
-      className="flex min-h-screen lg:h-screen w-full lg:snap-start flex-col overflow-y-auto lg:overflow-hidden bg-[#245b6d] px-5 pb-6 pt-24 sm:px-8 lg:px-12"
+      className="flex min-h-screen lg:h-screen w-full lg:snap-start flex-col overflow-y-auto lg:overflow-hidden bg-gradient-to-br from-[#1b4452] via-[#245b6d] to-[#123642] px-5 pb-6 pt-24 sm:px-8 lg:px-12"
     >
-      <div className="relative z-30 mx-auto w-full max-w-6xl shrink-0 text-center">
+      <div className="relative z-30 mx-auto w-full max-w-xl lg:max-w-6xl shrink-0 text-center">
         <span className="text-xs font-bold uppercase tracking-[0.24em] text-[#3cd5f7]">
           Affhan Workflow
         </span>
