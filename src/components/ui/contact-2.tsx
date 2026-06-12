@@ -83,7 +83,50 @@ export const Contact2 = ({
   }, []);
 
   return (
-    <section className="relative min-h-screen bg-white text-slate-900 pt-32 pb-36 flex flex-col justify-center overflow-hidden">
+    <section className="relative min-h-screen bg-gradient-to-b from-[#f8fafc] via-[#f1f5f9] to-[#e2e8f0] text-slate-900 pt-32 pb-36 flex flex-col justify-center overflow-hidden">
+      <style dangerouslySetInnerHTML={{ __html: `
+        .liquid-glass-card {
+          background: linear-gradient(135deg, rgba(255, 255, 255, 0.55) 0%, rgba(240, 253, 250, 0.3) 100%) !important;
+          backdrop-filter: blur(24px) !important;
+          -webkit-backdrop-filter: blur(24px) !important;
+          border-top: 2px solid rgba(255, 255, 255, 0.9) !important;
+          border-left: 2px solid rgba(255, 255, 255, 0.9) !important;
+          border-bottom: 2px solid rgba(148, 163, 184, 0.35) !important;
+          border-right: 2px solid rgba(148, 163, 184, 0.35) !important;
+          border-radius: 28px !important;
+          box-shadow: 
+            inset 0 3px 10px rgba(255, 255, 255, 0.95), 
+            inset 0 -3px 10px rgba(0, 0, 0, 0.04),
+            inset 0 1px 18px rgba(255, 255, 255, 0.45),
+            0 12px 32px rgba(15, 23, 42, 0.06),
+            0 1px 3px rgba(0, 0, 0, 0.02) !important;
+          transition: all 0.45s cubic-bezier(0.16, 1, 0.3, 1) !important;
+          will-change: transform, box-shadow, background-color, border-color;
+        }
+
+        .liquid-glass-card:hover {
+          background: linear-gradient(135deg, rgba(255, 255, 255, 0.75) 0%, rgba(240, 253, 250, 0.4) 100%) !important;
+          border-top-color: rgba(255, 255, 255, 0.99) !important;
+          border-left-color: rgba(255, 255, 255, 0.99) !important;
+          border-bottom-color: rgba(148, 163, 184, 0.55) !important;
+          border-right-color: rgba(148, 163, 184, 0.55) !important;
+          box-shadow: 
+            inset 0 5px 15px rgba(255, 255, 255, 0.98), 
+            inset 0 -5px 15px rgba(0, 0, 0, 0.05),
+            inset 0 1px 25px rgba(255, 255, 255, 0.6),
+            0 24px 50px rgba(39, 168, 196, 0.16),
+            0 4px 12px rgba(0, 0, 0, 0.03) !important;
+          transform: translateY(-8px) scale(1.015) !important;
+        }
+
+        .liquid-glass-card:active {
+          transform: translateY(-3px) scale(0.99) !important;
+          box-shadow: 
+            inset 0 2px 6px rgba(255, 255, 255, 0.9), 
+            inset 0 -2px 6px rgba(0, 0, 0, 0.05), 
+            0 12px 25px rgba(39, 168, 196, 0.08) !important;
+        }
+      `}} />
       {/* Background radial glow */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(39,168,196,0.06),transparent_40%),radial-gradient(circle_at_70%_70%,rgba(241,245,249,0.6),transparent_40%)] pointer-events-none" />
       
@@ -106,7 +149,7 @@ export const Contact2 = ({
               </p>
             </div>
             
-            <div className="mx-auto w-full max-w-sm lg:mx-0 rounded-2xl border border-slate-200/80 bg-white p-7 sm:p-9 shadow-[0_24px_60px_rgba(15,23,42,0.06)]">
+            <div className="mx-auto w-full max-w-sm lg:mx-0 p-7 sm:p-9 liquid-glass-card">
               <h3 className="mb-6 text-center text-xl font-bold tracking-tight lg:text-left text-[#176579]">
                 Contact Details
               </h3>
@@ -194,7 +237,7 @@ export const Contact2 = ({
           </div>
           
           {/* Form Side */}
-          <div className="mx-auto w-full max-w-screen-md flex flex-col gap-6 rounded-2xl border border-slate-200/80 bg-white p-6 sm:p-10 shadow-[0_24px_60px_rgba(15,23,42,0.06)] lg:w-7/12">
+          <div className="mx-auto w-full max-w-screen-md flex flex-col gap-6 p-6 sm:p-10 lg:w-7/12 liquid-glass-card">
             <div className="flex flex-col sm:flex-row gap-4">
               <div className="grid w-full items-center gap-2">
                 <Label htmlFor="firstname" className="text-slate-700 font-semibold tracking-wide">First Name</Label>

@@ -287,14 +287,13 @@ export function Navbar() {
 
   return (
     <header
-      className="fixed left-0 top-0 z-50 flex h-16 w-full items-center justify-between bg-white px-4 sm:px-8 lg:px-16 shadow-[0_8px_24px_rgba(0,0,0,0.08)] text-slate-950"
+      className="fixed left-0 top-0 z-50 flex h-16 w-full items-center justify-between bg-white px-2.5 sm:px-8 lg:px-16 shadow-[0_8px_24px_rgba(0,0,0,0.08)] text-slate-950"
     >
-      {/* Left Container: Logo and Desktop Search */}
-      <div className="flex items-center gap-4 lg:gap-6 shrink-0">
+      <div className="flex items-center gap-1.5 sm:gap-4 lg:gap-6 shrink-0">
         {/* Brand Logo */}
         <Link
-          className={`relative block h-14 w-32 shrink-0 sm:h-[60px] sm:w-36 -ml-1.5 sm:ml-0 ${
-            showNavbarSearch ? "hidden lg:block" : "block"
+          className={`relative block h-14 shrink-0 sm:h-[60px] sm:w-36 -ml-1.5 sm:ml-0 transition-all duration-300 ${
+            showNavbarSearch ? "w-18" : "w-32"
           }`}
           href="/"
           aria-label="AFFHAN home"
@@ -383,7 +382,7 @@ export function Navbar() {
 
       {/* Mobile Search Input (only shown on mobile if showNavbarSearch is true) */}
       {showNavbarSearch && (
-        <div ref={mobileSearchRef} className="flex-1 mx-2 relative lg:hidden">
+        <div ref={mobileSearchRef} className="flex-1 mx-1 relative lg:hidden">
           <form
             onSubmit={handleNavbarSearchSubmit}
             className="w-full relative flex items-center h-9 rounded-full bg-slate-100 border border-slate-200/85 px-2.5 transition-all duration-300 focus-within:border-[#27a8c4]/60 focus-within:bg-white focus-within:shadow-[0_0_12px_rgba(39,168,196,0.15)]"
@@ -485,7 +484,7 @@ export function Navbar() {
       </nav>
 
       {/* Right Container: Desktop Contact and Mobile Actions */}
-      <div className="flex items-center gap-3 shrink-0">
+      <div className="flex items-center gap-1.5 sm:gap-3 shrink-0">
         {/* Desktop Contact Us button */}
         <Link
           onClick={(e) => handleNavClick(e, "contact", "/contact")}
@@ -497,7 +496,7 @@ export function Navbar() {
         </Link>
 
       {/* Mobile Actions Container */}
-      <div className="flex items-center gap-1.5 lg:hidden">
+      <div className="flex items-center gap-1 lg:hidden">
         {mounted && (
           <>
             {/* Search Shortcut */}

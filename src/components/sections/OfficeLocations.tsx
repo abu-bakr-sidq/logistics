@@ -176,7 +176,50 @@ export const OfficeLocations = () => {
   };
 
   return (
-    <section id="locations" className="relative bg-white text-slate-900 pb-20 pt-8 scroll-mt-24 overflow-hidden">
+    <section id="locations" className="relative bg-gradient-to-b from-[#f8fafc] via-[#f1f5f9] to-[#e2e8f0] text-slate-900 pb-20 pt-8 scroll-mt-24 overflow-hidden">
+      <style dangerouslySetInnerHTML={{ __html: `
+        .liquid-glass-card {
+          background: linear-gradient(135deg, rgba(255, 255, 255, 0.55) 0%, rgba(240, 253, 250, 0.3) 100%) !important;
+          backdrop-filter: blur(24px) !important;
+          -webkit-backdrop-filter: blur(24px) !important;
+          border-top: 2px solid rgba(255, 255, 255, 0.9) !important;
+          border-left: 2px solid rgba(255, 255, 255, 0.9) !important;
+          border-bottom: 2px solid rgba(148, 163, 184, 0.35) !important;
+          border-right: 2px solid rgba(148, 163, 184, 0.35) !important;
+          border-radius: 28px !important;
+          box-shadow: 
+            inset 0 3px 10px rgba(255, 255, 255, 0.95), 
+            inset 0 -3px 10px rgba(0, 0, 0, 0.04),
+            inset 0 1px 18px rgba(255, 255, 255, 0.45),
+            0 12px 32px rgba(15, 23, 42, 0.06),
+            0 1px 3px rgba(0, 0, 0, 0.02) !important;
+          transition: all 0.45s cubic-bezier(0.16, 1, 0.3, 1) !important;
+          will-change: transform, box-shadow, background-color, border-color;
+        }
+
+        .liquid-glass-card:hover {
+          background: linear-gradient(135deg, rgba(255, 255, 255, 0.75) 0%, rgba(240, 253, 250, 0.4) 100%) !important;
+          border-top-color: rgba(255, 255, 255, 0.99) !important;
+          border-left-color: rgba(255, 255, 255, 0.99) !important;
+          border-bottom-color: rgba(148, 163, 184, 0.55) !important;
+          border-right-color: rgba(148, 163, 184, 0.55) !important;
+          box-shadow: 
+            inset 0 5px 15px rgba(255, 255, 255, 0.98), 
+            inset 0 -5px 15px rgba(0, 0, 0, 0.05),
+            inset 0 1px 25px rgba(255, 255, 255, 0.6),
+            0 24px 50px rgba(39, 168, 196, 0.16),
+            0 4px 12px rgba(0, 0, 0, 0.03) !important;
+          transform: translateY(-8px) scale(1.015) !important;
+        }
+
+        .liquid-glass-card:active {
+          transform: translateY(-3px) scale(0.99) !important;
+          box-shadow: 
+            inset 0 2px 6px rgba(255, 255, 255, 0.9), 
+            inset 0 -2px 6px rgba(0, 0, 0, 0.05), 
+            0 12px 25px rgba(39, 168, 196, 0.08) !important;
+        }
+      `}} />
       {/* Background Dot Grid Matrix & Radial Glows */}
       <div className="absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-[0.35] pointer-events-none" />
       <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-[#27a8c4]/5 rounded-full blur-[120px] pointer-events-none" />
@@ -228,10 +271,10 @@ export const OfficeLocations = () => {
             {offices.map((office, idx) => (
               <div
                 key={idx}
-                className="group relative flex flex-col justify-between rounded-2xl border border-slate-200/80 bg-white/70 p-6 backdrop-blur-md transition-all duration-300 hover:-translate-y-2 hover:border-[#27a8c4]/50 hover:bg-white hover:shadow-[0_24px_50px_rgba(39,168,196,0.14)] w-[285px] sm:w-[320px] shrink-0 overflow-hidden min-h-[265px]"
+                className="group relative flex flex-col justify-between p-6 w-[285px] sm:w-[320px] shrink-0 overflow-hidden min-h-[265px] liquid-glass-card"
               >
                 {/* Top border indicator */}
-                <div className="absolute top-0 left-0 right-0 h-1.5 bg-[#27a8c4] rounded-t-2xl opacity-60 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute top-0 left-0 right-0 h-1.5 bg-[#27a8c4] rounded-t-[28px] opacity-60 group-hover:opacity-100 transition-opacity duration-300" />
                 
                 <div>
                   {/* Badge with inline SVG flag */}

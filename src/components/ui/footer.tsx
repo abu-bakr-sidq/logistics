@@ -78,7 +78,7 @@ export const Footer: FC<FooterProps> = ({
     >
       <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-9 px-6 py-12 sm:px-8 md:grid-cols-2 lg:grid-cols-4 lg:gap-12 lg:px-14">
         <section className="flex flex-col items-start gap-4">
-          <div className="flex items-center gap-3">
+          <div className="flex h-12 items-center gap-3">
             <span className="flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-[0_10px_28px_rgba(15,23,42,0.08)] ring-1 ring-slate-200">
               <Image
                 src={logoSrc}
@@ -106,9 +106,11 @@ export const Footer: FC<FooterProps> = ({
         </section>
 
         <nav className="lg:justify-self-center" aria-label="Useful links">
-          <h3 className="mb-4 text-base font-bold tracking-wide text-white">
-            {usefulLinksTitle}
-          </h3>
+          <div className="flex h-12 items-center mb-4">
+            <h3 className="text-base font-bold tracking-wide text-white">
+              {usefulLinksTitle}
+            </h3>
+          </div>
           <ul className="space-y-2.5">
             {usefulLinks.map((link) => (
               <li key={link.label}>
@@ -124,9 +126,11 @@ export const Footer: FC<FooterProps> = ({
         </nav>
 
         <nav className="lg:justify-self-center" aria-label="Follow us">
-          <h3 className="mb-4 text-base font-bold tracking-wide text-white">
-            {socialTitle}
-          </h3>
+          <div className="flex h-12 items-center mb-4">
+            <h3 className="text-base font-bold tracking-wide text-white">
+              {socialTitle}
+            </h3>
+          </div>
           <ul className="space-y-2.5">
             {socialLinks.map((link) => (
               <li key={link.label}>
@@ -144,9 +148,11 @@ export const Footer: FC<FooterProps> = ({
         </nav>
 
         <section>
-          <h3 className="mb-4 text-base font-bold tracking-wide text-white">
-            {contactTitle}
-          </h3>
+          <div className="flex h-12 items-center mb-4">
+            <h3 className="text-base font-bold tracking-wide text-white">
+              {contactTitle}
+            </h3>
+          </div>
           {contactLines ? (
             <div className="text-sm leading-7 text-slate-200/90">
               {contactLines}
