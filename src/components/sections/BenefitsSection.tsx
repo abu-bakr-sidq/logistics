@@ -5,7 +5,7 @@ export function BenefitsSection() {
   return (
     <section
       id="benefits"
-      className="relative flex min-h-screen lg:h-screen w-full lg:snap-start flex-col items-center justify-center overflow-y-auto lg:overflow-hidden bg-[#245b6d] px-5 py-24 lg:py-10 sm:px-8 lg:px-12"
+      className="relative flex min-h-screen lg:h-screen w-full lg:snap-start flex-col items-center justify-center overflow-x-hidden lg:overflow-hidden bg-[#245b6d] px-5 py-24 lg:py-10 sm:px-8 lg:px-12"
     >
       {/* Background Ambient Glow */}
       <div className="absolute left-1/2 top-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(39,168,196,0.12)_0%,rgba(39,168,196,0)_70%)] pointer-events-none" />
