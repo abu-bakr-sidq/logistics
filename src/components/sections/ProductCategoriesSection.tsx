@@ -1,8 +1,38 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useRef, useEffect, MouseEvent } from "react";
 import { productCategories } from "@/data/home-page";
+
+const categoryNameToDbName: Record<string, string> = {
+  "Automotive Parts & Accessories": "Automative Parts",
+  "Bed & Mattress": "Bed Mattress",
+  "Car & Bike Parts": "Car Bike Parts & Accessories",
+  "Cell Phones & Accessories": "Cell Phones Accessories",
+  "Chair & Furniture": "Chair Furniture",
+  "Clothing & Fabrics": "Clothing Fabrics",
+  "Computers": "Computer",
+  "Cosmetic & Beauty": "Cosmetic Beauty",
+  "Health & Household": "Health Household",
+  "Home & Kitchen": "Home Kitchen",
+  "Lighting": "Lights",
+  "Machine & Transport Spares": "Machine Transport Spares",
+  "Optical & Sunglasses": "Optical Sun Glasses",
+  "Outdoors": "Outdoors Garden",
+  "Pet Products": "Pet Supplies",
+  "Phones": "Cell Phones Accessories",
+  "Shelves": "Shelfs",
+  "Sports & Gym": "Gym Equipment",
+  "Sports & Outdoors": "Sports Outdoors",
+  "Stationery": "Stationary",
+  "Steel": "Metals & Alloys",
+  "Tools": "Tools Home Improvement",
+  "Toys & Games": "Toys Games",
+  "Transportation": "Transporting",
+  "Umbrellas": "Umbrella",
+  "Watches": "Watch",
+};
 
 function CategoryCard({
   category,
@@ -11,12 +41,19 @@ function CategoryCard({
   category: { name: string; image: string };
   index: number;
 }) {
+  const dbCategoryName = categoryNameToDbName[category.name] || category.name;
+  const targetUrl = `/categories?category=${encodeURIComponent(dbCategoryName)}`;
+
   return (
-    <article
-      className="group relative box-border h-[156px] max-h-[21vh] w-[176px] shrink-0 overflow-hidden rounded-2xl border border-slate-200/50 bg-white/50 shadow-[0_8px_24px_rgba(15,23,42,0.02)] backdrop-blur-md transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-1.5 hover:border-[#27a8c4]/45 hover:bg-white/80 hover:shadow-[0_16px_36px_rgba(39,168,196,0.08)] focus-within:-translate-y-1.5 focus-within:border-[#27a8c4]/45 sm:h-[170px] sm:w-[200px] lg:h-[184px] lg:w-[224px]"
+    <Link
+      href={targetUrl}
+      className="group relative box-border h-[156px] max-h-[21vh] w-[176px] shrink-0 overflow-hidden rounded-2xl categories-glass-card sm:h-[170px] sm:w-[200px] lg:h-[184px] lg:w-[224px] block"
       style={{ animationDelay: `${index * 24}ms` }}
     >
-      <div className="relative h-[70%] overflow-hidden bg-slate-50">
+      {/* Glossy sweeping glass sheen reflection overlay */}
+      <div className="glass-sheen" />
+
+      <div className="relative h-[70%] overflow-hidden bg-slate-100/10">
         <Image
           className="object-cover transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.06] group-focus-within:scale-[1.06]"
           src={`/images/browse-by-category/${category.image}`}
@@ -27,7 +64,7 @@ function CategoryCard({
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-black/0 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-within:opacity-100" />
       </div>
-      <div className="relative flex h-[30%] items-center border-t border-slate-100/50 bg-transparent px-4">
+      <div className="relative flex h-[30%] items-center border-t border-slate-200/20 bg-transparent px-4">
         <h3 className="line-clamp-2 text-xs font-semibold leading-5 text-slate-800 transition-colors duration-300 group-hover:text-[#176579] group-focus-within:text-[#176579] sm:text-[13px] select-none">
           {category.name}
         </h3>
@@ -35,7 +72,7 @@ function CategoryCard({
         {/* Sleek growing cyan accent line on hover */}
         <div className="absolute bottom-0 left-0 h-[2px] w-0 bg-[#27a8c4] transition-all duration-300 ease-out group-hover:w-full group-focus-within:w-full shadow-[0_0_8px_rgba(39,168,196,0.6)]" />
       </div>
-    </article>
+    </Link>
   );
 }
 
@@ -259,8 +296,54 @@ export function ProductCategoriesSection() {
   return (
     <section
       id="product-categories"
-      className="relative box-border flex min-h-screen lg:h-screen w-full lg:snap-start flex-col justify-center overflow-y-auto lg:overflow-hidden bg-[#f9fafb] px-5 py-24 lg:py-8 sm:px-8 lg:px-14"
+      className="relative box-border flex min-h-screen lg:h-screen w-full lg:snap-start flex-col justify-center overflow-y-auto lg:overflow-hidden bg-[#f9fafb] px-5 pt-24 pb-12 sm:px-8 lg:px-14 lg:pt-28 lg:pb-10"
     >
+      <style dangerouslySetInnerHTML={{
+        __html: `
+        .categories-glass-card {
+          background: linear-gradient(135deg, rgba(255, 255, 255, 0.45) 0%, rgba(240, 253, 250, 0.25) 100%) !important;
+          backdrop-filter: blur(20px) !important;
+          -webkit-backdrop-filter: blur(20px) !important;
+          border-top: 1.5px solid rgba(255, 255, 255, 0.8) !important;
+          border-left: 1.5px solid rgba(255, 255, 255, 0.8) !important;
+          border-bottom: 1.5px solid rgba(148, 163, 184, 0.2) !important;
+          border-right: 1.5px solid rgba(148, 163, 184, 0.2) !important;
+          box-shadow: 
+            inset 0 2px 6px rgba(255, 255, 255, 0.7), 
+            inset 0 -2px 6px rgba(0, 0, 0, 0.02),
+            0 8px 24px rgba(15, 23, 42, 0.04) !important;
+          transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+          will-change: transform, box-shadow, background-color, border-color;
+        }
+
+        .categories-glass-card:hover {
+          background: linear-gradient(135deg, rgba(255, 255, 255, 0.6) 0%, rgba(240, 253, 250, 0.35) 100%) !important;
+          border-top-color: rgba(255, 255, 255, 0.95) !important;
+          border-left-color: rgba(255, 255, 255, 0.95) !important;
+          border-bottom-color: rgba(148, 163, 184, 0.3) !important;
+          border-right-color: rgba(148, 163, 184, 0.3) !important;
+          box-shadow: 
+            inset 0 4px 10px rgba(255, 255, 255, 0.85), 
+            inset 0 -4px 10px rgba(0, 0, 0, 0.03),
+            0 16px 36px rgba(39, 168, 196, 0.1),
+            0 2px 6px rgba(0, 0, 0, 0.01) !important;
+          transform: translateY(-6px) !important;
+        }
+
+        .glass-sheen {
+          position: absolute;
+          inset: 0;
+          pointer-events: none;
+          background: linear-gradient(135deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0) 100%);
+          transform: translateX(-100%);
+          transition: transform 0.6s ease;
+          z-index: 20;
+        }
+        .categories-glass-card:hover .glass-sheen {
+          transform: translateX(100%);
+        }
+      `}} />
+
       {/* Subtle background light cyan radial light aura */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(39,168,196,0.05)_0%,rgba(0,0,0,0)_60%)] pointer-events-none" />
 

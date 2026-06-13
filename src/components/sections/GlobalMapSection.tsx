@@ -181,7 +181,7 @@ export function GlobalMapSection() {
   return (
     <section
       id="global-map"
-      className="flex min-h-screen lg:h-screen w-full lg:snap-start flex-col justify-center overflow-y-auto lg:overflow-hidden bg-white px-5 py-24 lg:py-8 sm:px-8 lg:px-12"
+      className="flex min-h-screen lg:h-screen w-full lg:snap-start flex-col justify-center overflow-y-auto lg:overflow-hidden bg-white px-5 pt-24 pb-12 sm:px-8 lg:px-12 lg:pt-28 lg:pb-10"
     >
       <div className="mx-auto my-auto flex w-full max-w-[1460px] flex-col items-center justify-center overflow-hidden">
         <div className="h-auto min-h-[78px] sm:min-h-[88px] lg:h-[100px] w-full max-w-[1120px] flex items-center justify-center">

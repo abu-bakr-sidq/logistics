@@ -89,7 +89,7 @@ export function PopularProductsSection() {
   return (
     <section
       id="popular-products"
-      className="relative box-border flex min-h-screen lg:h-screen w-full lg:snap-start flex-col justify-center overflow-y-auto lg:overflow-hidden bg-[#f9fafb] px-5 py-24 lg:py-8 sm:px-8 lg:px-14"
+      className="relative box-border flex min-h-screen lg:h-screen w-full lg:snap-start flex-col justify-center overflow-y-auto lg:overflow-hidden bg-[#f9fafb] px-5 pt-24 pb-12 sm:px-8 lg:px-14 lg:pt-28 lg:pb-10"
     >
       {/* High-tech dot mesh overlay */}
       <div className="absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:24px_24px] opacity-[0.28] pointer-events-none" />
