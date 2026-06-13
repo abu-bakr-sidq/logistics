@@ -506,7 +506,7 @@ export function CategoriesDirectory() {
 
       {/* Sourcing Inquiry Popup Modal */}
       {inquiryProduct && (
-        <div className="fixed inset-0 z-50 flex items-end justify-center lg:items-center p-0 lg:p-4 bg-slate-900/40 backdrop-blur-sm animate-[timeline-fade-in_200ms_ease-out]">
+        <div className="fixed inset-0 z-[60] flex items-end justify-center lg:items-center p-0 lg:p-4 bg-slate-900/40 backdrop-blur-sm animate-[timeline-fade-in_200ms_ease-out]">
           <div className="w-full lg:max-w-lg max-h-[92vh] lg:max-h-none overflow-hidden rounded-t-3xl lg:rounded-3xl border border-slate-200 bg-white/95 p-6 shadow-2xl backdrop-blur-md animate-[product-category-in_300ms_cubic-bezier(0.16,1,0.3,1)_both] flex flex-col">
             {/* Drag Handle for Mobile */}
             <div className="w-12 h-1.5 bg-slate-200 rounded-full mx-auto mb-4 lg:hidden shrink-0" />
@@ -670,7 +670,7 @@ export function CategoriesDirectory() {
 
       {/* Mobile Drawer Sidebar */}
       {isMobileSidebarOpen && (
-        <div className="fixed inset-0 z-50 flex lg:hidden">
+        <div className="fixed inset-0 z-[60] flex lg:hidden">
           {/* Backdrop overlay */}
           <div
             onClick={() => setIsMobileSidebarOpen(false)}

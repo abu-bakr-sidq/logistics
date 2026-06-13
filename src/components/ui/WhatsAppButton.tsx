@@ -70,7 +70,7 @@ export function WhatsAppButton() {
   };
 
   return (
-    <div className="fixed bottom-24 md:bottom-6 right-6 md:right-8 z-50 flex flex-col items-end gap-2 font-sans tracking-tight pointer-events-none">
+    <div className="fixed bottom-24 md:bottom-6 right-[21px] md:right-8 z-50 flex flex-col items-center gap-2 font-sans tracking-tight pointer-events-none">
       {/* Scroll to Top Button */}
       <AnimatePresence>
         {isScrolled && (
@@ -80,7 +80,7 @@ export function WhatsAppButton() {
             exit={{ opacity: 0, scale: 0.5, y: 15 }}
             transition={{ duration: 0.3, ease: "easeOut" }}
             onClick={scrollToTop}
-            className="pointer-events-auto flex h-11 w-11 items-center justify-center rounded-full bg-[rgb(14,165,233)] text-white shadow-[rgba(14,165,233,0.3)_0px_4px_14px] hover:bg-[#0284c7] transition-all duration-300 hover:scale-110 active:scale-95 cursor-pointer mr-1.5 animate-[fadeIn_0.2s_ease]"
+            className="pointer-events-auto flex h-11 w-11 items-center justify-center rounded-full bg-[rgb(14,165,233)] text-white shadow-[rgba(14,165,233,0.3)_0px_4px_14px] hover:bg-[#0284c7] transition-all duration-300 hover:scale-110 active:scale-95 cursor-pointer animate-[fadeIn_0.2s_ease]"
             aria-label="Scroll to top"
             style={{
               outline: "none"
@@ -92,7 +92,7 @@ export function WhatsAppButton() {
       </AnimatePresence>
 
       {/* WhatsApp Trigger Button Container */}
-      <div className="relative flex flex-col items-end pointer-events-auto">
+      <div className="relative flex flex-col items-center pointer-events-auto">
         {/* Action Trigger */}
         <a
           href="https://wa.me/919092009044"
