@@ -232,6 +232,49 @@ export default function AboutGlobePage() {
 
   return (
     <main className="relative min-h-screen overflow-x-hidden bg-[#081f2a] text-white">
+      <style dangerouslySetInnerHTML={{ __html: `
+        .about-glass-card {
+          background: linear-gradient(135deg, rgba(255, 255, 255, 0.07) 0%, rgba(39, 168, 196, 0.06) 100%) !important;
+          backdrop-filter: blur(20px) !important;
+          -webkit-backdrop-filter: blur(20px) !important;
+          border-top: 1.5px solid rgba(255, 255, 255, 0.15) !important;
+          border-left: 1.5px solid rgba(255, 255, 255, 0.15) !important;
+          border-bottom: 1.5px solid rgba(255, 255, 255, 0.05) !important;
+          border-right: 1.5px solid rgba(255, 255, 255, 0.05) !important;
+          box-shadow:
+            inset 0 2px 6px rgba(255, 255, 255, 0.06),
+            inset 0 -2px 6px rgba(0, 0, 0, 0.08),
+            0 8px 24px rgba(0, 0, 0, 0.15) !important;
+          transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+          will-change: transform, box-shadow;
+        }
+        .about-glass-card:hover {
+          background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(39, 168, 196, 0.08) 100%) !important;
+          border-top-color: rgba(255, 255, 255, 0.22) !important;
+          border-left-color: rgba(255, 255, 255, 0.22) !important;
+          border-bottom-color: rgba(255, 255, 255, 0.08) !important;
+          border-right-color: rgba(255, 255, 255, 0.08) !important;
+          box-shadow:
+            inset 0 4px 10px rgba(255, 255, 255, 0.08),
+            inset 0 -4px 10px rgba(0, 0, 0, 0.1),
+            0 16px 36px rgba(39, 168, 196, 0.12),
+            0 2px 6px rgba(0, 0, 0, 0.06) !important;
+          transform: translateY(-4px) !important;
+        }
+        .about-glass-sheen {
+          position: absolute;
+          inset: 0;
+          pointer-events: none;
+          background: linear-gradient(135deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.08) 50%, rgba(255,255,255,0) 100%);
+          transform: translateX(-100%);
+          transition: transform 0.6s ease;
+          z-index: 20;
+          border-radius: inherit;
+        }
+        .about-glass-card:hover .about-glass-sheen {
+          transform: translateX(100%);
+        }
+      `}} />
       <div className="fixed left-0 top-0 z-50 h-0.5 w-full bg-white/10">
         <div
           className="h-full origin-left bg-[#27a8c4] shadow-[0_0_16px_rgba(39,168,196,0.55)]"
@@ -388,9 +431,10 @@ export default function AboutGlobePage() {
                   return (
                     <article
                       key={highlight.title}
-                      className="group w-full overflow-hidden rounded-xl border border-white/10 bg-white/[0.04] backdrop-blur-md transition-all duration-500 hover:border-[#27a8c4]/40 hover:shadow-[0_12px_40px_rgba(39,168,196,0.12)]"
+                      className="group relative w-full overflow-hidden rounded-xl about-glass-card"
                       style={{ animationDelay: `${hIdx * 120}ms` }}
                     >
+                      <div className="about-glass-sheen" />
                       {/* Teal Header Bar */}
                       <div className="flex items-center gap-3 bg-[#1a4a5a] px-5 py-3.5 sm:px-6">
                         <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white/15 text-white/80 transition-all duration-300 group-hover:bg-[#27a8c4]/25 group-hover:text-[#3cd5f7]">
@@ -427,9 +471,10 @@ export default function AboutGlobePage() {
                   return (
                     <article
                       key={feature.title}
-                      className="group rounded-xl border border-white/12 bg-white/[0.07] p-5 text-left backdrop-blur-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-[#27a8c4]/45 hover:bg-white/[0.1] hover:shadow-[0_16px_40px_rgba(39,168,196,0.12)]"
+                      className="group relative overflow-hidden rounded-xl p-5 text-left about-glass-card"
                       style={{ animationDelay: `${fIdx * 100}ms` }}
                     >
+                      <div className="about-glass-sheen" />
                       {FeatureIcon ? (
                         <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full border border-[#27a8c4]/30 bg-[#27a8c4]/15 text-[#27a8c4] transition-all duration-300 group-hover:scale-110 group-hover:rotate-6">
                           <FeatureIcon className="h-5 w-5" />
@@ -450,7 +495,8 @@ export default function AboutGlobePage() {
             )}
 
             {section.id === "footprint" && (
-              <div className="mx-auto mt-6 w-full max-w-4xl rounded-xl border border-white/10 bg-white/[0.03] p-6 text-left backdrop-blur-md transition-all duration-300 hover:border-[#27a8c4]/30 hover:bg-white/[0.05] sm:p-8">
+              <div className="mx-auto mt-6 w-full max-w-4xl relative overflow-hidden rounded-xl p-6 text-left sm:p-8 about-glass-card">
+                <div className="about-glass-sheen" />
                 <h3 className="text-lg font-bold tracking-tight text-[#3cd5f7] sm:text-xl">
                   Why Choose Affhan Group?
                 </h3>

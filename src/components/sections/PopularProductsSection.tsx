@@ -17,14 +17,15 @@ function PopularProductCard({
   return (
     <article
       onClick={onClick}
-      className={`group relative box-border h-[170px] w-[105px] shrink-0 overflow-hidden rounded-xl border transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] sm:h-[268px] sm:w-[208px] lg:h-[280px] lg:w-[220px] cursor-pointer ${
-        isActive
-          ? "border-[#27a8c4] bg-[#27a8c4]/5 shadow-[0_8px_24px_rgba(39,168,196,0.12)] ring-1 ring-[#27a8c4]/50"
-          : "border-slate-200/50 bg-white shadow-[0_4px_12px_rgba(15,23,42,0.02)] hover:border-[#27a8c4]/35 hover:-translate-y-1 hover:shadow-[0_8px_20px_rgba(39,168,196,0.05)]"
+      className={`group relative box-border h-[170px] w-[105px] shrink-0 overflow-hidden rounded-xl cursor-pointer popular-glass-card sm:h-[268px] sm:w-[208px] lg:h-[280px] lg:w-[220px] ${
+        isActive ? "active-card" : ""
       }`}
     >
+      {/* Glossy sweeping glass sheen reflection overlay */}
+      <div className="glass-sheen" />
+
       {/* Product Image */}
-      <div className="relative h-[64%] overflow-hidden bg-slate-50">
+      <div className="relative h-[64%] overflow-hidden bg-slate-100/10">
         <Image
           alt={product.name}
           className="object-cover transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.04]"
@@ -36,7 +37,7 @@ function PopularProductCard({
       </div>
       
       {/* Product Name */}
-      <div className="relative flex h-[36%] items-center bg-slate-55/60 sm:bg-transparent px-2.5 sm:px-3.5 border-t border-slate-100/60 sm:border-t-0">
+      <div className="relative flex h-[36%] items-center px-2.5 sm:px-3.5 border-t border-slate-200/10 bg-transparent">
         <h3 className="line-clamp-2 text-[9.5px] font-bold leading-[1.25] text-slate-800 tracking-tight transition-colors duration-300 group-hover:text-[#176579] sm:text-[13px] sm:font-semibold sm:leading-snug">
           {product.name}
         </h3>
@@ -91,6 +92,61 @@ export function PopularProductsSection() {
       id="popular-products"
       className="relative box-border flex min-h-screen lg:h-screen w-full lg:snap-start flex-col justify-center overflow-y-auto lg:overflow-hidden bg-[#f9fafb] px-5 pt-24 pb-12 sm:px-8 lg:px-14 lg:pt-28 lg:pb-10"
     >
+      <style dangerouslySetInnerHTML={{
+        __html: `
+        .popular-glass-card {
+          background: linear-gradient(135deg, rgba(255, 255, 255, 0.45) 0%, rgba(240, 253, 250, 0.25) 100%) !important;
+          backdrop-filter: blur(20px) !important;
+          -webkit-backdrop-filter: blur(20px) !important;
+          border-top: 1.5px solid rgba(255, 255, 255, 0.8) !important;
+          border-left: 1.5px solid rgba(255, 255, 255, 0.8) !important;
+          border-bottom: 1.5px solid rgba(148, 163, 184, 0.2) !important;
+          border-right: 1.5px solid rgba(148, 163, 184, 0.2) !important;
+          box-shadow: 
+            inset 0 2px 6px rgba(255, 255, 255, 0.7), 
+            inset 0 -2px 6px rgba(0, 0, 0, 0.02),
+            0 8px 24px rgba(15, 23, 42, 0.04) !important;
+          transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+          will-change: transform, box-shadow, background-color, border-color;
+        }
+
+        .popular-glass-card:hover {
+          background: linear-gradient(135deg, rgba(255, 255, 255, 0.6) 0%, rgba(240, 253, 250, 0.35) 100%) !important;
+          border-top-color: rgba(255, 255, 255, 0.95) !important;
+          border-left-color: rgba(255, 255, 255, 0.95) !important;
+          border-bottom-color: rgba(148, 163, 184, 0.3) !important;
+          border-right-color: rgba(148, 163, 184, 0.3) !important;
+          box-shadow: 
+            inset 0 4px 10px rgba(255, 255, 255, 0.85), 
+            inset 0 -4px 10px rgba(0, 0, 0, 0.03),
+            0 16px 36px rgba(39, 168, 196, 0.1),
+            0 2px 6px rgba(0, 0, 0, 0.01) !important;
+          transform: translateY(-6px) !important;
+        }
+
+        .popular-glass-card.active-card {
+          background: linear-gradient(135deg, rgba(255, 255, 255, 0.7) 0%, rgba(224, 242, 254, 0.45) 100%) !important;
+          border: 2px solid #27a8c4 !important;
+          box-shadow: 
+            inset 0 2px 8px rgba(255, 255, 255, 0.9), 
+            inset 0 -2px 8px rgba(0, 0, 0, 0.02),
+            0 12px 28px rgba(39, 168, 196, 0.15) !important;
+        }
+
+        .glass-sheen {
+          position: absolute;
+          inset: 0;
+          pointer-events: none;
+          background: linear-gradient(135deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0) 100%);
+          transform: translateX(-100%);
+          transition: transform 0.6s ease;
+          z-index: 20;
+        }
+        .popular-glass-card:hover .glass-sheen {
+          transform: translateX(100%);
+        }
+      `}} />
+
       {/* High-tech dot mesh overlay */}
       <div className="absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:24px_24px] opacity-[0.28] pointer-events-none" />
       {/* Subtle background light cyan radial light aura at bottom-left */}

@@ -255,6 +255,47 @@ export function CategoriesDirectory() {
         .sidebar-scrollbar:hover::-webkit-scrollbar-thumb {
           background: rgba(148, 163, 184, 0.35);
         }
+
+        .directory-glass-card {
+          background: linear-gradient(135deg, rgba(255, 255, 255, 0.45) 0%, rgba(240, 253, 250, 0.25) 100%) !important;
+          backdrop-filter: blur(20px) !important;
+          -webkit-backdrop-filter: blur(20px) !important;
+          border-top: 1.5px solid rgba(255, 255, 255, 0.8) !important;
+          border-left: 1.5px solid rgba(255, 255, 255, 0.8) !important;
+          border-bottom: 1.5px solid rgba(148, 163, 184, 0.2) !important;
+          border-right: 1.5px solid rgba(148, 163, 184, 0.2) !important;
+          box-shadow:
+            inset 0 2px 6px rgba(255, 255, 255, 0.7),
+            inset 0 -2px 6px rgba(0, 0, 0, 0.02),
+            0 8px 24px rgba(15, 23, 42, 0.04) !important;
+          transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+          will-change: transform, box-shadow;
+        }
+        .directory-glass-card:hover {
+          background: linear-gradient(135deg, rgba(255, 255, 255, 0.6) 0%, rgba(240, 253, 250, 0.35) 100%) !important;
+          border-top-color: rgba(255, 255, 255, 0.95) !important;
+          border-left-color: rgba(255, 255, 255, 0.95) !important;
+          border-bottom-color: rgba(148, 163, 184, 0.3) !important;
+          border-right-color: rgba(148, 163, 184, 0.3) !important;
+          box-shadow:
+            inset 0 4px 10px rgba(255, 255, 255, 0.85),
+            inset 0 -4px 10px rgba(0, 0, 0, 0.03),
+            0 16px 36px rgba(39, 168, 196, 0.1),
+            0 2px 6px rgba(0, 0, 0, 0.01) !important;
+          transform: translateY(-6px) !important;
+        }
+        .directory-glass-sheen {
+          position: absolute;
+          inset: 0;
+          pointer-events: none;
+          background: linear-gradient(135deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0) 100%);
+          transform: translateX(-100%);
+          transition: transform 0.6s ease;
+          z-index: 20;
+        }
+        .directory-glass-card:hover .directory-glass-sheen {
+          transform: translateX(100%);
+        }
       `}} />
 
       {/* Background radial effects */}
@@ -394,8 +435,9 @@ export function CategoriesDirectory() {
                   {displayedProducts.map((product, idx) => (
                     <article
                       key={`${product.name}-${product.image}-${idx}`}
-                      className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-slate-100/50 sm:border-slate-200/60 bg-white shadow-[0_4px_16px_rgba(15,23,42,0.03)] transition-all duration-300 hover:-translate-y-1 hover:border-[#27a8c4]/60 hover:shadow-[0_20px_40px_rgba(39,168,196,0.12)]"
+                      className="group relative flex flex-col justify-between overflow-hidden rounded-2xl directory-glass-card"
                     >
+                      <div className="directory-glass-sheen" />
                       {/* Image Frame */}
                       <div className="relative aspect-square sm:aspect-[4/3] w-full overflow-hidden bg-white border-b border-slate-100 p-1.5 sm:p-4">
                         <Image
